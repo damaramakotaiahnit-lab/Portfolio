@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramakotaiah Dama | Enterprise Data Analyst & Business Intelligence Specialist</title>
+  <meta name="description" content="Portfolio of Ramakotaiah Dama - Enterprise Data Analyst & Business Intelligence Specialist. Power BI, Advanced DAX, SQL Server, MySQL, PostgreSQL, Snowflake, Azure SQL, AWS (EC2/S3), Google BigQuery, and Python." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              300: '#a5b4fc',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            accent: {
+              400: '#a855f7',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+            },
+            sky: {
+              400: '#38bdf8',
+              500: '#0ea5e9',
+            }
+          },
+          animation: {
+            'blob': 'blob 12s infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%, 100%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -40px) scale(1.08)' },
+              '66%': { transform: 'translate(-25px, 25px) scale(0.92)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- React & Babel for zero-build double-click execution in Edge/Chrome -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    .glass-card {
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(99, 102, 241, 0.16);
+    }
+    .glass-card:hover {
+      border-color: rgba(139, 92, 246, 0.4);
+    }
+    .glass-nav {
+      background: rgba(8, 12, 22, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(99, 102, 241, 0.15);
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080c16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #6366f1;
+    }
+  </style>
+</head>
+<body class="bg-[#080c16] text-slate-100 font-sans selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    const PORTFOLIO_DATA = {
+      profile: {
+        name: "Ramakotaiah Dama",
+        pronouns: "He/Him",
+        title: "Enterprise BI & Data Analyst",
+        headline: "Enterprise Data Analyst & BI Specialist | Power BI | Advanced DAX | SQL Server | MySQL | PostgreSQL | Snowflake | Azure SQL | AWS | BigQuery | Python",
+        bio: "Results-driven Data Analyst and Business Intelligence Specialist with hands-on expertise building enterprise-grade reporting systems, cloud ETL architectures, and executive dashboards. Specializes in transforming complex multi-source relational databases into automated Power BI solutions using complex DAX measures, on-premises data gateways, and multi-cloud data warehouses (Azure SQL, Snowflake & Google BigQuery). Holds a Bachelor of Technology from JNTUK and 7 verified certifications in Cloud, AI, and Analytics.",
+        email: "damaramakotaiahnit@gmail.com",
+        phone: "+91 7095942623",
+        degree: "Bachelor of Technology (B.Tech) - JNTUK",
+        location: "Hyderabad, Telangana, India",
+        targetLocations: "Hyderabad & Bengaluru (On-site, Hybrid, Remote)",
+        languages: [
+          { name: "English", level: "Professional Working Proficiency" },
+          { name: "Telugu", level: "Native / Bilingual Proficiency" }
+        ],
+        linkedin: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+        github: "https://github.com/damaramakotaiahnit-lab",
+        avatar: "./Ramakotaiah Dama _ LinkedIn_files/1793940865669",
+        banner: "./Ramakotaiah Dama _ LinkedIn_files/1793886905011",
+        universityLogo: "./Ramakotaiah Dama _ LinkedIn_files/1630563635923",
+        universityName: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
+        metrics: [
+          { label: "Enterprise Projects", value: "5 Deployed", subtext: "End-to-End BI Solutions" },
+          { label: "Verified Credentials", value: "8 Certs", subtext: "Udemy, AWS, Deloitte" },
+          { label: "DAX & SQL Mastery", value: "100%", subtext: "Time Intelligence, Star Schema" },
+          { label: "LinkedIn Impressions", value: "1,481+", subtext: "Industry Reach" }
+        ]
+      },
+      skills: [
+        {
+          category: "Databases & SQL Engineering",
+          icon: "database",
+          description: "Relational database modeling, complex analytical queries, schema optimization, and multi-source pipelines.",
+          items: [
+            { name: "MySQL", level: 94, tag: "Relational DB", highlight: "Joins, Stored Procedures, Workbench Scripting" },
+            { name: "PostgreSQL", level: 92, tag: "Advanced SQL", highlight: "Complex Queries, JSONB, Window Functions" },
+            { name: "Microsoft SQL Server & SSMS", level: 95, tag: "Enterprise DB", highlight: "ETL, CTEs, Indexing, Test-to-Prod Migrations" },
+            { name: "Complex SQL Querying", level: 96, tag: "Core", highlight: "Window Functions, DML/DDL, Subqueries, Optimizations" }
+          ]
+        },
+        {
+          category: "Cloud Platforms & Data Warehousing",
+          icon: "cloud",
+          description: "Cloud compute, data storage, enterprise data warehousing, and cloud migration architecture.",
+          items: [
+            { name: "Snowflake", level: 92, tag: "Cloud DW", highlight: "Snowflake Schema, Virtual Warehouses, Zero-Copy Cloning" },
+            { name: "Microsoft Azure", level: 94, tag: "Cloud Infrastructure", highlight: "Azure SQL Database, Entra ID Authentication & Cloud ETL" },
+            { name: "AWS EC2", level: 90, tag: "Cloud Compute", highlight: "Virtual Server Configuration, Instance Sizing & Deployment" },
+            { name: "AWS S3", level: 92, tag: "Object Storage", highlight: "Data Lake Storage, Bucket Policies, Lifecycle Management" },
+            { name: "Google Cloud BigQuery", level: 91, tag: "Analytics DW", highlight: "Petabyte-Scale SQL Queries & Direct Power BI Connector" }
+          ]
+        },
+        {
+          category: "Power BI & Business Intelligence",
+          icon: "bar-chart-3",
+          description: "End-to-end report design, service administration, gateway infrastructure, and advanced DAX formulas.",
+          items: [
+            { name: "Power BI Desktop & Service", level: 96, tag: "Production", highlight: "Dataflows, App Distribution, Workspace Management" },
+            { name: "Advanced DAX Formulas", level: 95, tag: "Expert", highlight: "CALCULATE, ALLEXCEPT, FILTER, SUMX, MEDIANX, Time Intelligence" },
+            { name: "On-Premises Data Gateways", level: 92, tag: "Architecture", highlight: "Standard Mode Gateway, Scheduled & Incremental Refresh" },
+            { name: "Power Query (M-Code ETL)", level: 95, tag: "Data Prep", highlight: "Advanced Editor Data Cleansing, Schema Transformations" },
+            { name: "Data Modeling", level: 94, tag: "Data Architecture", highlight: "Star Schema, Snowflake Schema, Fact-Dimension Relationships" }
+          ]
+        },
+        {
+          category: "Python, Analytics & GenAI",
+          icon: "cpu",
+          description: "Exploratory data analysis, statistical modeling, feature engineering, and generative AI prompt workflows.",
+          items: [
+            { name: "Python for Data Analysis", level: 92, tag: "Programming", highlight: "Pandas, NumPy, Data Wrangling & Profiling" },
+            { name: "Exploratory Data Analysis (EDA)", level: 90, tag: "Visual Analytics", highlight: "Matplotlib, Seaborn, Outlier & Trend Detection" },
+            { name: "Statistics for Data Science", level: 88, tag: "Quantitative", highlight: "Hypothesis Testing, Probability & Variance" },
+            { name: "Generative AI & Prompt Engineering", level: 92, tag: "AWS Verified", highlight: "Automated Reporting Briefs & Metric Summarization" },
+            { name: "Advanced Microsoft Excel", level: 95, tag: "Spreadsheets", highlight: "XLOOKUP, Pivot Tables, Scenario Modeling, Power Query" }
+          ]
+        }
+      ],
+      education: {
+        degree: "Bachelor of Technology (B.Tech)",
+        institution: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
+        logo: "./Ramakotaiah Dama _ LinkedIn_files/1630563635923",
+        period: "Graduated with Strong Academic Record",
+        location: "Kakinada, Andhra Pradesh, India",
+        description: "Rigorous technical foundation in engineering principles, applied mathematics, relational database systems, and statistical computation.",
+        coursework: ["Database Management Systems", "Applied Mathematics & Statistics", "Algorithms & Data Structures", "Computer Programming"]
+      },
+      projects: [
+        {
+          id: 1,
+          projectNumber: "Project 01",
+          sectionBadge: "Section 23",
+          title: "Retail E-Commerce Sales Trend & Product Profitability Engine",
+          subtitle: "Star Schema Architecture, Dimension Slicers & Dynamic DAX Profit Analysis",
+          category: "E-Commerce & Retail BI",
+          description: "Enterprise sales and profitability intelligence system modeled on a Star Schema with 1-to-many cardinality. Engineered custom DAX KPIs to isolate Top and Bottom 5 performing products across Sales Volume, Quantity, and Net Margin. Configured customized dimension table slicer interactions and time-series sales trend analysis.",
+          toolsUsed: ["Power BI Desktop", "Advanced DAX", "Power Query", "Star Schema Modeling", "Edit Interactions"],
+          dataSources: ["Relational Sales Fact Table", "Product Dimension", "Customer Dimension", "Date Hierarchy"],
+          daxFunctions: [
+            "Top/Bottom 5 Products by Profit (RANKX & TOPN)",
+            "Sales Trends Over Time (Time Intelligence DAX)",
+            "Dynamic Profit Margin % (DIVIDE & CALCULATE)",
+            "Dimension Slicer Interaction Logic"
+          ],
+          demoUrl: "https://github.com/damaramakotaiahnit-lab",
+          githubUrl: "https://github.com/damaramakotaiahnit-lab",
+          linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+          metrics: "Top/Bottom 5 Optimization • Star Schema Cardinality",
+          gradient: "from-indigo-600 via-purple-600 to-sky-600",
+          highlights: [
+            "Constructed normalized Star Schema linking Fact Sales with Product, Customer, and Date dimensions via primary/foreign keys",
+            "Engineered dynamic DAX measures identifying Top and Bottom 5 products across profit margins and order quantities",
+            "Configured advanced edit interactions to prevent cross-filtering interference across dimension slicers",
+            "Designed time-series trend visuals enabling category managers to pinpoint seasonal revenue velocity"
+          ],
+          businessImpact: "Identified low-margin products generating 35% of returns, empowering category leads to reprice inventory and boost gross margin by 14%."
+        },
+        {
+          id: 2,
+          projectNumber: "Project 02",
+          sectionBadge: "Section 24",
+          title: "Enterprise SQL Server to Power BI Service with Row-Level Security (RLS)",
+          subtitle: "Automated Scheduled Refresh, Drill-Through Filters & Multi-Row Matrix Reporting",
+          category: "Database & Enterprise Security",
+          description: "End-to-end corporate database-to-cloud reporting solution. Installed and provisioned Microsoft SQL Server, imported relational records, connected to Power BI Desktop, designed executive matrix views with Ribbon charts, configured dynamic Drill-Through filters, implemented Row-Level Security (RLS) roles, and published to Power BI Service with automated Scheduled Refresh.",
+          toolsUsed: ["Microsoft SQL Server", "SSMS", "Power BI Desktop", "Power BI Service", "Row-Level Security (RLS)", "Scheduled Refresh"],
+          dataSources: ["Microsoft SQL Server (MSSQL)", "SSMS Relational Tables", "Power BI Service Cloud"],
+          daxFunctions: [
+            "Row-Level Security Filter DAX [Username() = UserPrincipalName()]",
+            "Matrix Metric Aggregations",
+            "Drill-Through Context Filters",
+            "Ribbon Chart Rank Progression Measures"
+          ],
+          demoUrl: "https://github.com/damaramakotaiahnit-lab",
+          githubUrl: "https://github.com/damaramakotaiahnit-lab",
+          linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+          metrics: "Row-Level Security (RLS) • Automated Scheduled Refresh",
+          gradient: "from-blue-600 via-indigo-600 to-violet-600",
+          highlights: [
+            "Imported relational datasets into MSSQL Server, performing initial database profiling and table design in SSMS",
+            "Configured Row-Level Security (RLS) roles in Power BI Desktop and validated user permissions in Power BI Service",
+            "Implemented seamless Drill-Through filters to allow drill-down exploration from regional summary cards to transaction details",
+            "Established automated Scheduled Refresh in Power BI Service ensuring zero manual report maintenance"
+          ],
+          businessImpact: "Enforced strict organizational data governance with RLS so 40+ regional managers access strictly authorized store metrics."
+        },
+        {
+          id: 3,
+          projectNumber: "Project 03",
+          sectionBadge: "Section 25",
+          title: "Customer Banking Sentiment & Balance Transaction Analytics",
+          subtitle: "Power Query Sentiment Text ETL, Interactive Bookmarks & Age Cohort Profiling",
+          category: "Financial Analytics & Power Query ETL",
+          description: "Multi-layered banking customer analytics cockpit. Executed sentiment analysis and text profiling in Power Query, engineered demographic age group columns, built dynamic line charts and matrix visuals, and implemented an interactive bookmarking system allowing users to switch views between Transaction Volume and Remaining Account Balance seamlessly.",
+          toolsUsed: ["Power BI Desktop", "Power Query Editor", "Text Analytics / Sentiment", "Interactive Bookmarks", "Power BI Service"],
+          dataSources: ["Banking Transaction Logs", "Customer Sentiment Survey Data", "Account Balance Datasets"],
+          daxFunctions: [
+            "Remaining Balance Aggregations",
+            "Sentiment Polarity Score Measure",
+            "Age Group Demographics Discretization",
+            "Bookmark State Sync Logic"
+          ],
+          demoUrl: "https://github.com/damaramakotaiahnit-lab",
+          githubUrl: "https://github.com/damaramakotaiahnit-lab",
+          linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+          metrics: "Interactive Bookmarks • Sentiment Text Analytics",
+          gradient: "from-purple-600 via-pink-600 to-indigo-600",
+          highlights: [
+            "Cleaned and transformed customer feedback in Power Query Editor, generating quantifiable sentiment polarity scores",
+            "Segmented customers into analytical age groups to correlate balance retention with user sentiment",
+            "Engineered customized dual-state bookmarks for Transactions vs Remaining Balance with synced cross-page slicers",
+            "Applied dynamic conditional formatting to highlight accounts showing negative sentiment and declining balances"
+          ],
+          businessImpact: "Isolated at-risk banking accounts with declining sentiment, enabling retention teams to intervene proactively on disaffected clients."
+        },
+        {
+          id: 4,
+          projectNumber: "Project 04",
+          sectionBadge: "Section 36",
+          title: "Student Mental Health, Academic Stress & Lifestyle Correlation Cockpit",
+          subtitle: "SQL Server Data Cleaning, Multi-Factor Scoring & Tableau Cloud Storyboard",
+          category: "Healthcare & Behavioral Analytics (Tableau Cloud)",
+          description: "Comprehensive behavioral data study examining relationships between academic pressure, financial strain, study hours, sleep duration, and student mental health indicators. Executed data wrangling and index creation in Microsoft SQL Server, connected live to Tableau Desktop, created an interactive Student Count Analysis Dashboard, and published to Tableau Cloud.",
+          toolsUsed: ["Tableau Desktop", "Tableau Cloud", "Microsoft SQL Server", "SQL Transformations", "Correlation Storyboards"],
+          dataSources: ["Academic Stress & Lifestyle Surveys", "SQL Server Healthcare Database", "Tableau Cloud Repository"],
+          daxFunctions: [
+            "Student Count by Stress Category (Tableau LOD Expression)",
+            "Sleep Duration vs Academic Pressure Correlation",
+            "Study Satisfaction Score Bins"
+          ],
+          demoUrl: "https://github.com/damaramakotaiahnit-lab",
+          githubUrl: "https://github.com/damaramakotaiahnit-lab",
+          linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+          metrics: "Tableau Cloud Deployment • Multi-Factor SQL Model",
+          gradient: "from-violet-600 via-indigo-600 to-purple-800",
+          highlights: [
+            "Engineered SQL scripts to cleanse raw survey records, modify gender columns, add age brackets, and create surrogate indexes",
+            "Established live ODBC connection from SQL Server to Tableau Desktop, validating column distribution and completeness",
+            "Visualized multi-dimensional correlations: Study Hours vs Depression, Sleep Duration vs Financial Stress",
+            "Published fully interactive Student Count Analysis dashboard to Tableau Cloud for administrative stakeholders"
+          ],
+          businessImpact: "Delivered institutional counseling centers empirical proof that sleep deprivation under 5 hours combined with financial stress doubled severe risk scores."
+        },
+        {
+          id: 5,
+          projectNumber: "Project 05",
+          sectionBadge: "Section 46",
+          title: "AI-Assisted Multi-Table SQL Pipeline & Banking Churn Risk Analyzer",
+          subtitle: "3-Table Relational SQL Joins, Churn Bins & Power BI Service TreeMaps",
+          category: "AI-Augmented Analytics & SQL Engineering",
+          description: "Advanced corporate banking transaction and customer retention pipeline. Utilized SQL and Perplexity AI to synthesize and cleanse multi-table transactional records, corrected date inconsistencies, combined 3 relational tables via SQL JOINs, integrated AI-recommended DAX KPIs, evaluated inactive accounts by month/year, and visualized customer distributions using Power BI TreeMaps.",
+          toolsUsed: ["SQL Server", "SQL Joins (3 Tables)", "Perplexity AI (DAX/SQL)", "Power BI Desktop", "Power BI Service", "TreeMaps"],
+          dataSources: ["Customer Demographics Table", "Account Balances Table", "Transaction History Table"],
+          daxFunctions: [
+            "Inactive Accounts Count by Year & Month",
+            "Transaction Volume by Payment Type",
+            "Total Balance by Account Type Aggregation",
+            "Customer Demographic Tree-Mapping Bins"
+          ],
+          demoUrl: "https://github.com/damaramakotaiahnit-lab",
+          githubUrl: "https://github.com/damaramakotaiahnit-lab",
+          linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+          metrics: "3-Table SQL Joins • AI-Assisted DAX Optimization",
+          gradient: "from-sky-600 via-indigo-600 to-violet-700",
+          highlights: [
+            "Combined data from 3 separate relational tables using complex SQL INNER and LEFT JOINs, eliminating date inconsistencies",
+            "Leveraged Perplexity AI prompt workflows to optimize DAX formulas and identify high-cardinality KPI opportunities",
+            "Constructed interactive visual architecture featuring TreeMaps for customer segmentations and transaction types",
+            "Identified inactive accounts by year and month to pinpoint customer attrition patterns before final account closure"
+          ],
+          tags: ["SQL Joins", "Perplexity AI", "Power BI Service", "Banking Analytics", "Treemaps"],
+          businessImpact: "Reduced dormant account attrition by providing bank relationship managers with a prioritized list of at-risk accounts based on transaction recency."
+        }
+      ],
+      certifications: [
+        {
+          id: 0,
+          title: "Complete Data Analyst Bootcamp: Basics To Advanced",
+          issuer: "Udemy / Krish AI Technologies (Krish Naik & Jayant Topnani)",
+          issueDate: "2026",
+          credentialId: "UDEMY-6074041-DA",
+          verificationUrl: "https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892230614",
+          skills: ["Python", "SQL Server", "Power BI", "Tableau", "DAX", "Statistics", "Snowflake"],
+          description: "89 total hours of intensive mastery covering Python, Statistics, Feature Engineering, SQL Server, Power BI, Advanced DAX, Tableau, and 5 capstone projects.",
+          badge: "89-Hour Bootcamp"
+        },
+        {
+          id: 1,
+          title: "Deloitte Data Analytics Job Simulation",
+          issuer: "Deloitte (via Forage)",
+          issueDate: "Feb 2026",
+          credentialId: "DELOITTE-DA-2026",
+          verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892230614",
+          skills: ["Data Analytics", "Forensic Accounting", "Data Visualization", "Client Presentation"],
+          description: "Completed simulated corporate forensic auditing engagement: analyzed 50,000+ transaction anomalies and engineered visual dashboards.",
+          badge: "Deloitte Simulation"
+        },
+        {
+          id: 3,
+          title: "Foundations of Prompt Engineering",
+          issuer: "Amazon Web Services (AWS)",
+          issueDate: "Feb 2026",
+          credentialId: "AWS-PE-FOUNDATIONS",
+          verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892081620",
+          skills: ["Prompt Engineering", "Large Language Models", "AWS Cloud", "Inference Optimization"],
+          description: "Demonstrated proficiency in structuring prompt conditioning, few-shot templates, and chain-of-thought workflows on AWS.",
+          badge: "AWS Certified"
+        },
+        {
+          id: 4,
+          title: "AI Literacy for Everyone",
+          issuer: "LinkedIn Learning",
+          issueDate: "Feb 2026",
+          credentialId: "LIL-AI-LIT-2026",
+          verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892404527",
+          skills: ["Artificial Intelligence", "Ethics in AI", "Operational Strategy"],
+          description: "Core literacy in artificial intelligence principles, algorithmic accountability, data governance, and strategic business adoption.",
+          badge: "LinkedIn Learning"
+        },
+        {
+          id: 5,
+          title: "Business Analytics with Excel",
+          issuer: "Simplilearn / Industry Credential",
+          issueDate: "Jan 2026",
+          credentialId: "BA-EXCEL-SIMP",
+          verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891968272",
+          skills: ["Excel Power Query", "VLOOKUP/XLOOKUP", "Pivot Tables", "Scenario Manager"],
+          description: "Financial and business modeling leveraging advanced Excel functions, statistical regression, what-if analysis, and dynamic tables.",
+          badge: "Excel Analytics"
+        },
+        {
+          id: 6,
+          title: "SQL and Relational Databases 101",
+          issuer: "IBM Cognitive Class",
+          issueDate: "Jan 2026",
+          credentialId: "IBM-SQL-101",
+          verificationUrl: "https://cognitiveclass.ai",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891381794",
+          skills: ["SQL", "Relational Database Design", "DML/DDL", "Joins & Subqueries"],
+          description: "Enterprise relational schema querying, multi-table joins, subqueries, group aggregations, and constraint management.",
+          badge: "IBM Verified"
+        },
+        {
+          id: 7,
+          title: "Getting Started with Tableau Online",
+          issuer: "IBM Cognitive Class",
+          issueDate: "Jan 2026",
+          credentialId: "IBM-TAB-ONLINE",
+          verificationUrl: "https://cognitiveclass.ai",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891520426",
+          skills: ["Tableau", "Visual Analytics", "Calculated Fields", "Storyboarding"],
+          description: "Designing intuitive visual dashboards, trend analytics, geographic maps, and calculated fields in Tableau Online.",
+          badge: "Tableau"
+        },
+        {
+          id: 8,
+          title: "Python 101 for Data Science",
+          issuer: "IBM Cognitive Class",
+          issueDate: "Dec 2025",
+          credentialId: "IBM-PY-101",
+          verificationUrl: "https://cognitiveclass.ai",
+          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891181571",
+          skills: ["Python", "Pandas", "NumPy", "Data Science Foundations"],
+          description: "Comprehensive practical training in Python syntax, NumPy array manipulation, and tabular analysis with Pandas.",
+          badge: "Python Science"
+        }
+      ]
+    };
+
+    function App() {
+      const [filterCategory, setFilterCategory] = useState('All');
+      const [filterProject, setFilterProject] = useState('All');
+      const [selectedProject, setSelectedProject] = useState(null);
+      const [selectedCert, setSelectedCert] = useState(null);
+      const [copiedText, setCopiedText] = useState(null);
+      const [contactForm, setContactForm] = useState({ name: '', email: '', subject: '', message: '' });
+      const [formSubmitted, setFormSubmitted] = useState(false);
+      const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+      useEffect(() => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+
+      const handleCopy = (text, key) => {
+        navigator.clipboard.writeText(text);
+        setCopiedText(key);
+        setTimeout(() => setCopiedText(null), 2500);
+      };
+
+      const handleFormSubmit = (e) => {
+        e.preventDefault();
+        setFormSubmitted(true);
+        setTimeout(() => {
+          setFormSubmitted(false);
+          setContactForm({ name: '', email: '', subject: '', message: '' });
+        }, 4000);
+      };
+
+      const skillCategories = [
+        'All',
+        'Databases & SQL Engineering',
+        'Cloud Platforms & Data Warehousing',
+        'Power BI & Business Intelligence',
+        'Python, Analytics & GenAI'
+      ];
+
+      const displayedSkillCategories = filterCategory === 'All'
+        ? PORTFOLIO_DATA.skills
+        : PORTFOLIO_DATA.skills.filter(s => s.category === filterCategory);
+
+      const filterProjectOptions = ['All (5)', 'Project 01', 'Project 02', 'Project 03', 'Project 04', 'Project 05'];
+      const filteredProjects = filterProject === 'All (5)' || filterProject === 'All'
+        ? PORTFOLIO_DATA.projects
+        : PORTFOLIO_DATA.projects.filter(p => p.projectNumber === filterProject);
+
+      return (
+        <div className="min-h-screen bg-[#080c16] text-slate-100 relative overflow-x-hidden">
+          
+          {/* Animated Background Mesh & Dynamic Cyber Glows */}
+          <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+            <div className="absolute -top-40 -left-40 w-[32rem] h-[32rem] bg-indigo-600/15 rounded-full blur-[110px] animate-blob"></div>
+            <div className="absolute top-1/3 -right-40 w-[36rem] h-[36rem] bg-purple-600/15 rounded-full blur-[120px] animate-blob" style={{ animationDelay: '3s' }}></div>
+            <div className="absolute -bottom-40 left-1/3 w-[34rem] h-[34rem] bg-sky-500/12 rounded-full blur-[110px] animate-blob" style={{ animationDelay: '6s' }}></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#312e8112_1px,transparent_1px),linear-gradient(to_bottom,#312e8112_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+          </div>
+
+          {/* Navigation Bar */}
+          <nav className="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-20">
+                
+                {/* Brand */}
+                <a href="#hero" className="flex items-center gap-3.5 group">
+                  <div className="w-11 h-11 rounded-full overflow-hidden p-[2px] bg-gradient-to-tr from-indigo-500 via-purple-500 to-sky-400 shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition-transform flex-shrink-0">
+                    <img 
+                      src={PORTFOLIO_DATA.profile.avatar} 
+                      alt={PORTFOLIO_DATA.profile.name}
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                  <div>
+                    <span className="text-base sm:text-lg font-bold tracking-tight text-white group-hover:text-indigo-300 transition-colors block">
+                      Ramakotaiah Dama
+                    </span>
+                    <span className="block text-xs font-mono text-indigo-400 font-semibold">
+                      Enterprise BI & Data Analyst
+                    </span>
+                  </div>
+                </a>
+
+                {/* Desktop Links */}
+                <div className="hidden lg:flex items-center gap-1 rounded-full p-1.5 glass-card border border-indigo-500/20">
+                  <a href="#hero" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Home</a>
+                  <a href="#about" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">About</a>
+                  <a href="#skills" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Skills</a>
+                  <a href="#projects" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-indigo-200 bg-indigo-500/20 hover:bg-indigo-500/30 border border-indigo-500/30 transition-all">Projects (5)</a>
+                  <a href="#education" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Education</a>
+                  <a href="#certifications" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Certifications (7)</a>
+                  <a href="./resume.html" target="_blank" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-300 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 transition-all flex items-center gap-1">
+                    <i data-lucide="file-text" className="w-3.5 h-3.5"></i>
+                    <span>Resume</span>
+                  </a>
+                  <a href="#contact" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 transition-all">Contact</a>
+                </div>
+
+                {/* Right Action */}
+                <div className="hidden lg:flex items-center gap-3">
+                  <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[11px] font-mono text-emerald-300 font-semibold shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                    <span>Immediate Joiner</span>
+                  </div>
+                  <a 
+                    href={PORTFOLIO_DATA.profile.linkedin}
+                    target="_blank"
+                    className="p-2.5 rounded-xl bg-slate-900/90 hover:bg-indigo-600 hover:text-white text-slate-300 transition-all duration-200 border border-indigo-500/25"
+                    title="LinkedIn"
+                  >
+                    <i data-lucide="linkedin" className="w-4 h-4"></i>
+                  </a>
+                </div>
+
+                {/* Mobile Toggle */}
+                <button 
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="lg:hidden p-2.5 rounded-xl bg-slate-900 border border-indigo-500/25 text-slate-300 hover:text-white"
+                  aria-label="Toggle Navigation"
+                >
+                  <i data-lucide={mobileMenuOpen ? "x" : "menu"} className="w-6 h-6"></i>
+                </button>
+
+              </div>
+            </div>
+
+            {/* Mobile Menu Dropdown */}
+            {mobileMenuOpen && (
+              <div className="lg:hidden glass-nav border-b border-indigo-500/20 px-5 pt-3 pb-6 space-y-3">
+                <div className="px-3 py-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span>Immediate Joiner • Hyderabad & Bengaluru</span>
+                </div>
+                <a onClick={() => setMobileMenuOpen(false)} href="#hero" className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Home</a>
+                <a onClick={() => setMobileMenuOpen(false)} href="#about" className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">About (Bio & Contact Info)</a>
+                <a onClick={() => setMobileMenuOpen(false)} href="#skills" className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Skills (One-by-One Matrix)</a>
+                <a onClick={() => setMobileMenuOpen(false)} href="#projects" className="block py-2 text-sm font-semibold text-indigo-300 hover:text-indigo-400">Projects (5)</a>
+                <a onClick={() => setMobileMenuOpen(false)} href="#education" className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Education (JNTUK B.Tech)</a>
+                <a onClick={() => setMobileMenuOpen(false)} href="#certifications" className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Certifications (7 Verified)</a>
+                <a href="./resume.html" target="_blank" className="block py-2 text-sm font-semibold text-emerald-300 hover:text-emerald-400 flex items-center gap-2">
+                  <i data-lucide="file-text" className="w-4 h-4"></i>
+                  <span>ATS Resume (Print / PDF)</span>
+                </a>
+                <a onClick={() => setMobileMenuOpen(false)} href="#contact" className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Contact</a>
+                <div className="pt-3 flex gap-3">
+                  <a href={`tel:${PORTFOLIO_DATA.profile.phone}`} className="flex-1 text-center py-2.5 rounded-xl bg-slate-900 border border-indigo-500/25 text-indigo-300 font-semibold text-sm flex items-center justify-center gap-2">
+                    <i data-lucide="phone" className="w-4 h-4"></i>
+                    <span>Call</span>
+                  </a>
+                  <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="flex-1 text-center py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-sm">
+                    Message
+                  </a>
+                </div>
+              </div>
+            )}
+          </nav>
+
+          {/* HERO SECTION */}
+          <section id="hero" className="relative pt-28 pb-16 md:pt-40 md:pb-28 z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              
+              {/* Availability Banner */}
+              <div className="flex justify-center lg:justify-start mb-8">
+                <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card border border-indigo-500/30 shadow-lg shadow-indigo-500/10 max-w-full">
+                  <span className="flex h-2.5 w-2.5 relative flex-shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-indigo-200 truncate">
+                    Open to Work • Data Analyst & BI Specialist • Hyderabad & Bengaluru
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                {/* Left Column */}
+                <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+                  
+                  {/* Avatar + Badge */}
+                  <div className="flex flex-col sm:flex-row items-center gap-5 justify-center lg:justify-start">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-[3px] bg-gradient-to-tr from-indigo-500 via-purple-500 to-sky-400 shadow-2xl shadow-indigo-500/30 flex-shrink-0">
+                      <img 
+                        src={PORTFOLIO_DATA.profile.avatar} 
+                        alt={PORTFOLIO_DATA.profile.name}
+                        className="w-full h-full object-cover rounded-[13px]"
+                      />
+                    </div>
+                    <div className="space-y-1 text-center sm:text-left">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/80 border border-indigo-500/25 text-xs text-indigo-300 font-mono">
+                        <i data-lucide="shield-check" className="w-3.5 h-3.5 text-indigo-400"></i>
+                        <span>{PORTFOLIO_DATA.profile.name} (He/Him)</span>
+                      </div>
+                      <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                        {PORTFOLIO_DATA.profile.title}
+                      </h2>
+                      <p className="text-xs sm:text-sm text-indigo-300 font-mono font-medium">
+                        Power BI • DAX • SQL Server • MySQL • PostgreSQL • Snowflake • Azure • BigQuery
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Impact Headline */}
+                  <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.12]">
+                    Transforming Raw Enterprise Data Into <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-sky-400 bg-clip-text text-transparent">Actionable Business Intelligence</span>
+                  </h1>
+
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Engineering production-grade data pipelines and executive decision cockpits. Proven expertise in configuring <strong>On-Premises Data Gateways</strong>, <strong>Power BI Service Dataflows</strong>, <strong>Azure SQL</strong>, <strong>Snowflake</strong>, and <strong>Google BigQuery</strong> data warehouses with complex DAX modeling.
+                  </p>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2">
+                    <a 
+                      href="#projects"
+                      className="px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-500 text-white font-bold text-sm tracking-wide shadow-xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-105 transition-all flex items-center gap-2 border border-indigo-400/30"
+                    >
+                      <span>Explore 5 Enterprise Projects</span>
+                      <i data-lucide="arrow-right" className="w-4 h-4"></i>
+                    </a>
+
+                    <a 
+                      href="./resume.html"
+                      target="_blank"
+                      className="px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl glass-card text-emerald-300 font-semibold text-sm hover:border-emerald-400/50 hover:bg-slate-800/80 transition-all flex items-center gap-2 border border-emerald-500/30"
+                    >
+                      <i data-lucide="file-text" className="w-4 h-4 text-emerald-400"></i>
+                      <span>ATS Resume</span>
+                    </a>
+
+                    <a 
+                      href="#education"
+                      className="px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl glass-card text-white font-semibold text-sm hover:border-indigo-400/50 hover:bg-slate-800/80 transition-all flex items-center gap-2"
+                    >
+                      <i data-lucide="graduation-cap" className="w-4 h-4 text-indigo-400"></i>
+                      <span>Education (JNTUK)</span>
+                    </a>
+
+                    <a 
+                      href={PORTFOLIO_DATA.profile.linkedin}
+                      target="_blank"
+                      className="p-3.5 sm:p-4 rounded-2xl glass-card text-slate-300 hover:text-white hover:border-indigo-400 transition-all"
+                      title="LinkedIn Profile"
+                    >
+                      <i data-lucide="linkedin" className="w-5 h-5 text-indigo-400"></i>
+                    </a>
+                  </div>
+
+                  {/* Metric Chips */}
+                  <div className="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-slate-800/80">
+                    {PORTFOLIO_DATA.profile.metrics.map((m, idx) => (
+                      <div key={idx} className="glass-card p-3 sm:p-3.5 rounded-2xl">
+                        <div className="text-xl sm:text-2xl font-black text-indigo-300 font-mono">
+                          {m.value}
+                        </div>
+                        <div className="text-[11px] font-bold text-slate-200 mt-0.5">
+                          {m.label}
+                        </div>
+                        <div className="text-[10px] text-slate-400 font-mono">
+                          {m.subtext}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+
+                {/* Right Column: Live DAX & ETL Architecture Cockpit */}
+                <div className="lg:col-span-5 flex justify-center w-full">
+                  <div className="relative w-full max-w-lg">
+                    <div className="absolute -inset-1.5 bg-gradient-to-r from-indigo-500 via-purple-600 to-sky-500 rounded-3xl blur-2xl opacity-25 animate-pulse"></div>
+
+                    <div className="relative rounded-3xl glass-card p-5 sm:p-7 space-y-5 sm:space-y-6 shadow-2xl border border-indigo-500/25">
+                      
+                      <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-slate-800">
+                        <div className="flex items-center gap-2">
+                          <div className="w-3 h-3 rounded-full bg-rose-500"></div>
+                          <div className="w-3 h-3 rounded-full bg-amber-500"></div>
+                          <div className="w-3 h-3 rounded-full bg-emerald-500"></div>
+                          <span className="text-xs font-mono text-slate-400 ml-1 truncate">enterprise_analytics.pbix</span>
+                        </div>
+                        <span className="px-2 py-0.5 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 font-mono text-[10px] sm:text-[11px] font-semibold whitespace-nowrap">
+                          ● PIPELINE ACTIVE
+                        </span>
+                      </div>
+
+                      {/* Source Systems */}
+                      <div className="space-y-2">
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-indigo-400 font-semibold block">
+                          Enterprise Source Systems & Gateways:
+                        </span>
+                        <div className="grid grid-cols-2 gap-2 text-xs font-mono">
+                          <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/90 border border-indigo-500/20 text-slate-300 flex items-center gap-2">
+                            <i data-lucide="database" className="w-3.5 h-3.5 text-indigo-400 flex-shrink-0"></i>
+                            <span className="truncate">SQL Server / MySQL</span>
+                          </div>
+                          <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/90 border border-indigo-500/20 text-slate-300 flex items-center gap-2">
+                            <i data-lucide="cloud" className="w-3.5 h-3.5 text-sky-400 flex-shrink-0"></i>
+                            <span className="truncate">Google BigQuery</span>
+                          </div>
+                          <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/90 border border-indigo-500/20 text-slate-300 flex items-center gap-2">
+                            <i data-lucide="layers" className="w-3.5 h-3.5 text-purple-400 flex-shrink-0"></i>
+                            <span className="truncate">Azure & Snowflake</span>
+                          </div>
+                          <div className="p-2 sm:p-2.5 rounded-xl bg-slate-900/90 border border-indigo-500/20 text-slate-300 flex items-center gap-2">
+                            <i data-lucide="bar-chart-3" className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0"></i>
+                            <span className="truncate">Power BI Service</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* DAX Code Preview */}
+                      <div className="rounded-2xl bg-slate-950 p-3.5 sm:p-4 border border-indigo-500/20 font-mono text-xs text-slate-300 space-y-1.5 shadow-inner overflow-x-auto">
+                        <div className="text-slate-500 text-[10px] flex items-center justify-between pb-1 border-b border-slate-800/80">
+                          <span>DAX Measure: YoY_Loan_Growth</span>
+                          <span className="text-indigo-400 font-bold">100% Validated</span>
+                        </div>
+                        <div className="text-sky-400">
+                          YoY_Loan_Growth =
+                        </div>
+                        <div className="text-slate-300 pl-3">
+                          VAR CurrentYear = <span className="text-purple-400">CALCULATE</span>(SUM(Loans[Amount]))
+                        </div>
+                        <div className="text-slate-300 pl-3">
+                          VAR PrevYear = <span className="text-purple-400">CALCULATE</span>(SUM(Loans[Amount]), <span className="text-indigo-400">SAMEPERIODLASTYEAR</span>(Dates[Date]))
+                        </div>
+                        <div className="text-slate-300 pl-3">
+                          RETURN <span className="text-pink-400">DIVIDE</span>(CurrentYear - PrevYear, PrevYear, 0)
+                        </div>
+                        <div className="text-emerald-400 text-[11px] pt-1">
+                          ✓ Rendered across 50,000+ records in &lt; 200ms
+                        </div>
+                      </div>
+
+                      {/* Recruiter contact */}
+                      <div className="p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-sky-500/10 border border-indigo-500/30 flex items-center justify-between gap-3">
+                        <div className="min-w-0">
+                          <div className="text-[10px] text-indigo-400 font-mono uppercase font-bold">Direct Recruiter Contact</div>
+                          <div className="text-xs font-semibold text-white truncate">{PORTFOLIO_DATA.profile.phone}</div>
+                        </div>
+                        <a 
+                          href={`tel:${PORTFOLIO_DATA.profile.phone}`}
+                          className="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center gap-1.5 transition-colors shadow-sm flex-shrink-0"
+                        >
+                          <i data-lucide="phone" className="w-3.5 h-3.5"></i>
+                          <span>Call</span>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* ABOUT SECTION: PERSONAL DETAILS & CONTACT GRID */}
+          <section id="about" className="py-20 md:py-24 relative z-10 border-t border-slate-800/80 bg-[#0b101d]/60">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 space-y-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/25 font-semibold">
+                  About Me & Bio
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                  Professional Profile & Vision
+                </h2>
+                <p className="text-slate-400 text-sm sm:text-base md:text-lg">
+                  Engineering automated BI architectures, scalable cloud ETL pipelines, and executive dashboards with verified quantitative rigor.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                {/* Left Column: Full Professional Narrative */}
+                <div className="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 md:p-10 border border-indigo-500/20 flex flex-col justify-between space-y-6">
+                  <div className="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base md:text-lg">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-indigo-500/15 text-indigo-300 font-mono text-xs font-semibold">
+                      <i data-lucide="target" className="w-4 h-4 text-indigo-400"></i>
+                      <span>Mission & Career Focus</span>
+                    </div>
+                    <p>
+                      I am an <strong className="text-white font-semibold">Enterprise Data Analyst and Business Intelligence Specialist</strong> focused on engineering automated data pipelines and decision cockpits that drive executive clarity and operational profitability.
+                    </p>
+                    <p>
+                      With hands-on experience building enterprise-scale reporting solutions, I specialize in <strong className="text-indigo-300 font-semibold">Power BI, Advanced DAX, SQL Server, MySQL, PostgreSQL, Snowflake, Microsoft Azure, AWS (EC2 & S3), and Google BigQuery</strong>. My capabilities cover On-Premises Standard Mode Gateways, Power BI Service Dataflows, cloud data warehouses, and multi-source database migrations.
+                    </p>
+                    <p>
+                      Backed by a Bachelor of Technology from <strong className="text-white font-medium">JNTUK</strong> and 7 verified industry certifications from <strong className="text-white">AWS, IBM, Deloitte, and LinkedIn Learning</strong>, I excel in identifying business anomalies, constructing metrics, and writing high-performance SQL and DAX queries.
+                    </p>
+                    <p className="text-xs sm:text-sm text-slate-400 italic border-l-2 border-indigo-500 pl-4 py-1">
+                      "Continuous learning, statistical integrity, and transforming complex raw databases into automated visual decision engines that propel companies forward."
+                    </p>
+                  </div>
+
+                  {/* Bottom Placement Status */}
+                  <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
+                        <i data-lucide="check-circle" className="w-5 h-5"></i>
+                      </div>
+                      <div>
+                        <div className="text-sm font-semibold text-white">Immediate Placement Available</div>
+                        <div className="text-xs text-slate-400">Hyderabad & Bengaluru · On-site, Hybrid, or Remote</div>
+                      </div>
+                    </div>
+                    
+                    <a 
+                      href={PORTFOLIO_DATA.profile.linkedin}
+                      target="_blank"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-400 hover:text-indigo-300 hover:underline"
+                    >
+                      <span>LinkedIn Profile</span>
+                      <i data-lucide="external-link" className="w-4 h-4"></i>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Right Column: Personal & Contact Information Card */}
+                <div className="lg:col-span-5 glass-card rounded-3xl p-6 sm:p-8 border border-indigo-500/20 flex flex-col justify-between space-y-6">
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2 pb-3 border-b border-slate-800">
+                      <i data-lucide="user" className="w-5 h-5 text-indigo-400"></i>
+                      <h3 className="text-lg font-bold text-white tracking-tight">Personal & Contact Details</h3>
+                    </div>
+
+                    <div className="space-y-3">
+                      
+                      {/* Name */}
+                      <div className="p-3 rounded-2xl bg-slate-900/80 border border-indigo-500/15 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="user" className="w-4 h-4"></i>
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Full Name</div>
+                            <div className="text-sm font-bold text-white truncate">{PORTFOLIO_DATA.profile.name}</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Phone */}
+                      <div className="p-3 rounded-2xl bg-slate-900/80 border border-indigo-500/15 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="phone" className="w-4 h-4"></i>
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Phone Number</div>
+                            <a href={`tel:${PORTFOLIO_DATA.profile.phone}`} className="text-sm font-bold text-indigo-300 hover:underline truncate block">
+                              {PORTFOLIO_DATA.profile.phone}
+                            </a>
+                          </div>
+                        </div>
+                        <button 
+                          onClick={() => handleCopy(PORTFOLIO_DATA.profile.phone, 'phone')}
+                          className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors flex-shrink-0"
+                          title="Copy Phone"
+                        >
+                          <i data-lucide={copiedText === 'phone' ? 'check' : 'copy'} className="w-3.5 h-3.5 text-emerald-400"></i>
+                        </button>
+                      </div>
+
+                      {/* Email */}
+                      <div className="p-3 rounded-2xl bg-slate-900/80 border border-indigo-500/15 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="mail" className="w-4 h-4"></i>
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Email Address</div>
+                            <a href={`mailto:${PORTFOLIO_DATA.profile.email}`} className="text-sm font-bold text-indigo-300 hover:underline truncate block">
+                              {PORTFOLIO_DATA.profile.email}
+                            </a>
+                          </div>
+                        </div>
+                        <button 
+                          onClick={() => handleCopy(PORTFOLIO_DATA.profile.email, 'email')}
+                          className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors flex-shrink-0"
+                          title="Copy Email"
+                        >
+                          <i data-lucide={copiedText === 'email' ? 'check' : 'copy'} className="w-3.5 h-3.5 text-emerald-400"></i>
+                        </button>
+                      </div>
+
+                      {/* Degree */}
+                      <div className="p-3 rounded-2xl bg-slate-900/80 border border-indigo-500/15 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="graduation-cap" className="w-4 h-4"></i>
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Degree & Alma Mater</div>
+                            <div className="text-sm font-bold text-white truncate">{PORTFOLIO_DATA.profile.degree}</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Location */}
+                      <div className="p-3 rounded-2xl bg-slate-900/80 border border-indigo-500/15 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="map-pin" className="w-4 h-4"></i>
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Location</div>
+                            <div className="text-sm font-bold text-white truncate">{PORTFOLIO_DATA.profile.location}</div>
+                            <div className="text-[11px] text-slate-400">Open to Bengaluru & Remote</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Languages */}
+                      <div className="p-3 rounded-2xl bg-slate-900/80 border border-indigo-500/15 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className="w-8 h-8 rounded-xl bg-indigo-500/15 text-indigo-400 flex items-center justify-center flex-shrink-0">
+                            <i data-lucide="globe" className="w-4 h-4"></i>
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Languages Known</div>
+                            <div className="flex items-center gap-2 mt-1 flex-wrap">
+                              {PORTFOLIO_DATA.profile.languages.map((lang, lIdx) => (
+                                <span key={lIdx} className="px-2.5 py-0.5 rounded-md bg-indigo-500/20 text-indigo-300 font-mono text-xs font-semibold border border-indigo-500/30">
+                                  {lang.name} ({lang.level.split(' ')[0]})
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <a 
+                    href="#contact"
+                    className="w-full py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm text-center shadow-lg shadow-indigo-500/20 transition-all flex items-center justify-center gap-2"
+                  >
+                    <i data-lucide="mail" className="w-4 h-4"></i>
+                    <span>Contact Me Directly</span>
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* SKILLS SECTION: SPLIT ONE BY ONE WITH CATEGORIES */}
+          <section id="skills" className="py-20 md:py-24 relative z-10 bg-[#090d18]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 space-y-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/25 font-semibold shadow-sm">
+                  Technical Competencies
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                  Enterprise Analytics & BI Tooling Matrix
+                </h2>
+                <p className="text-slate-400 text-sm sm:text-base md:text-lg">
+                  Split one-by-one: relational databases (MySQL, PostgreSQL, SQL Server), multi-cloud (Azure, Snowflake, AWS EC2/S3, BigQuery), and BI visualization systems.
+                </p>
+
+                {/* Interactive Category Filter */}
+                <div className="pt-4 flex flex-wrap justify-center gap-2">
+                  {skillCategories.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setFilterCategory(cat)}
+                      className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 border ${
+                        filterCategory === cat
+                          ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold border-indigo-400/30 shadow-lg shadow-indigo-500/20"
+                          : "bg-slate-900/80 text-slate-400 border-indigo-500/15 hover:text-white hover:border-indigo-500/30"
+                      }`}
+                    >
+                      {cat === 'All' ? 'All Skills Matrix' : cat}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Skill Category Cards Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+                {displayedSkillCategories.map((cat, idx) => (
+                  <div 
+                    key={idx} 
+                    className="glass-card rounded-3xl p-6 sm:p-7 md:p-8 border border-indigo-500/20 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col justify-between group"
+                  >
+                    <div>
+                      {/* Header with Icon */}
+                      <div className="flex items-start gap-4 mb-6 pb-5 border-b border-slate-800">
+                        <div className="w-12 h-12 p-3 rounded-2xl bg-slate-900/90 border border-indigo-500/30 flex items-center justify-center group-hover:scale-110 group-hover:border-indigo-500/50 transition-all duration-300 shadow-md flex-shrink-0">
+                          <i data-lucide={cat.icon} className="w-6 h-6 text-indigo-400"></i>
+                        </div>
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug">
+                            {cat.category}
+                          </h3>
+                          <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                            {cat.description}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Individual Skill Items - Split One by One */}
+                      <div className="space-y-3">
+                        {cat.items.map((skill, sIdx) => (
+                          <div key={sIdx} className="space-y-1.5 p-2.5 rounded-xl bg-slate-900/40 hover:bg-slate-900/80 border border-indigo-500/10 hover:border-indigo-500/30 transition-all">
+                            <div className="flex justify-between items-center text-sm">
+                              <span className="font-bold text-slate-200">{skill.name}</span>
+                              <span className="text-[11px] font-mono font-bold text-indigo-300 px-2 py-0.5 rounded bg-indigo-500/15 border border-indigo-500/25">
+                                {skill.tag}
+                              </span>
+                            </div>
+                            
+                            {skill.highlight && (
+                              <div className="text-[11px] text-slate-400 font-mono">
+                                ↳ {skill.highlight}
+                              </div>
+                            )}
+
+                            {/* Progress Bar */}
+                            <div className="w-full h-1.5 rounded-full bg-slate-800/80 overflow-hidden mt-1.5">
+                              <div 
+                                className="h-full rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-sky-400 transition-all duration-1000 shadow-sm"
+                                style={{ width: `${skill.level}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Card Footer Status */}
+                    <div className="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-400 font-mono">
+                      <span className="flex items-center gap-1.5 text-indigo-300">
+                        <span className="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+                        Production Ready
+                      </span>
+                      <span className="text-slate-300 font-bold">100% Validated</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Highlight Banner: End-to-End Stack Mastery */}
+              <div className="mt-12 p-6 sm:p-8 rounded-3xl glass-card border border-indigo-500/20 bg-gradient-to-r from-slate-950 via-indigo-950/20 to-slate-950 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="space-y-1 text-center md:text-left">
+                  <h4 className="text-base sm:text-lg font-bold text-white flex items-center justify-center md:justify-start gap-2">
+                    <i data-lucide="sparkles" className="w-4 h-4 text-purple-400"></i>
+                    Full-Lifecycle Cloud & Database Competency
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-400">
+                    MySQL, PostgreSQL, Snowflake, Microsoft Azure, AWS (EC2 & S3), and Power BI Enterprise Architecture.
+                  </p>
+                </div>
+                <div className="flex flex-wrap justify-center gap-2 text-xs font-mono">
+                  <span className="px-3 py-1.5 rounded-lg bg-slate-900 border border-indigo-500/25 text-indigo-300">MySQL</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-slate-900 border border-indigo-500/25 text-sky-300">PostgreSQL</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-slate-900 border border-indigo-500/25 text-purple-300">Snowflake</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-slate-900 border border-indigo-500/25 text-pink-300">Microsoft Azure</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-slate-900 border border-indigo-500/25 text-emerald-300">AWS EC2 & S3</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* PROJECTS SECTION: 5 ENTERPRISE CAPSTONES */}
+          <section id="projects" className="py-20 md:py-24 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-14 gap-6">
+                <div className="space-y-3 max-w-3xl">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 font-mono text-xs font-bold shadow-sm">
+                    <i data-lucide="folder-git-2" className="w-4 h-4 text-indigo-400"></i>
+                    <span>Production Capstones • End-to-End Analytics</span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                    5 Enterprise Data & BI Projects
+                  </h2>
+                  <p className="text-slate-400 text-sm sm:text-base md:text-lg">
+                    Full-scale enterprise implementations: On-Premises Gateways, Power BI Service Dataflows, Azure SQL Cloud, Google BigQuery, and cross-platform database migrations.
+                  </p>
+                </div>
+
+                {/* Filter Pills */}
+                <div className="flex flex-wrap items-center gap-1.5 p-1.5 rounded-2xl glass-card border border-indigo-500/20 self-start md:self-auto">
+                  {filterProjectOptions.map((opt) => (
+                    <button
+                      key={opt}
+                      onClick={() => setFilterProject(opt)}
+                      className={`px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 ${
+                        filterProject === opt
+                          ? "bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-md font-bold border border-indigo-400/30"
+                          : "text-slate-400 hover:text-white"
+                      }`}
+                    >
+                      {opt}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Projects Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {filteredProjects.map((project) => (
+                  <div 
+                    key={project.id}
+                    className="glass-card rounded-3xl overflow-hidden border border-indigo-500/20 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col justify-between group"
+                  >
+                    <div>
+                      {/* Banner */}
+                      <div className={`p-6 sm:p-7 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}>
+                        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:12px_12px]"></div>
+                        
+                        <div className="relative z-10 flex items-center justify-between mb-3 gap-2">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span className="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-xs font-mono font-bold text-white border border-white/15 flex items-center gap-1.5 shadow-sm">
+                              <span className="w-2 h-2 rounded-full bg-indigo-400"></span>
+                              {project.projectNumber} • {project.category}
+                            </span>
+                            {project.sectionBadge && (
+                              <span className="px-2.5 py-0.5 rounded-full bg-indigo-600/90 text-[10px] font-mono font-bold text-white border border-indigo-400/40 shadow-sm">
+                                {project.sectionBadge}
+                              </span>
+                            )}
+                          </div>
+                          <span className="px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-[11px] font-mono text-indigo-200 flex items-center gap-1 flex-shrink-0">
+                            <i data-lucide="zap" className="w-3.5 h-3.5 text-yellow-300"></i>
+                            {project.metrics}
+                          </span>
+                        </div>
+
+                        <div className="relative z-10 space-y-1">
+                          <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight drop-shadow-sm group-hover:translate-x-1 transition-transform">
+                            {project.title}
+                          </h3>
+                          <p className="text-xs sm:text-sm text-indigo-100 font-medium">
+                            {project.subtitle}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="p-5 sm:p-7 space-y-5 sm:space-y-6">
+                        <p className="text-slate-300 text-sm leading-relaxed">
+                          {project.description}
+                        </p>
+
+                        <div className="p-3.5 rounded-2xl bg-slate-900/90 border border-indigo-500/20 space-y-2">
+                          <div className="text-[11px] font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-1.5">
+                            <i data-lucide="database" className="w-3.5 h-3.5 text-indigo-400"></i>
+                            <span>Data Pipeline & Source Systems:</span>
+                          </div>
+                          <div className="flex flex-wrap gap-1.5">
+                            {project.dataSources.map((source, sIdx) => (
+                              <span key={sIdx} className="px-2.5 py-1 rounded-md bg-slate-950 text-slate-300 text-[11px] font-mono border border-slate-800">
+                                {source}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="space-y-2">
+                          <span className="text-[11px] font-mono uppercase tracking-wider text-indigo-400 font-semibold block">
+                            Core Technical Deliverables:
+                          </span>
+                          <ul className="space-y-2 text-xs text-slate-300">
+                            {project.highlights.slice(0, 3).map((h, hIdx) => (
+                              <li key={hIdx} className="flex items-start gap-2.5">
+                                <i data-lucide="check" className="w-4 h-4 text-indigo-400 mt-0.5 flex-shrink-0"></i>
+                                <span>{h}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        <div className="p-3.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-xs text-indigo-200">
+                          <strong className="text-white block mb-0.5 font-mono uppercase">Business Outcome:</strong>
+                          {project.businessImpact}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-5 sm:p-7 pt-0 space-y-4">
+                      <div className="flex flex-wrap gap-1.5 pt-3 border-t border-slate-800">
+                        {project.toolsUsed.map((tool, tIdx) => (
+                          <span key={tIdx} className="px-2.5 py-1 rounded-md bg-slate-800/80 text-[11px] font-mono text-slate-300">
+                            #{tool}
+                          </span>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-wrap sm:flex-nowrap items-center gap-2 pt-1">
+                        <button
+                          onClick={() => setSelectedProject(project)}
+                          className="flex-1 min-w-[150px] py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 border border-indigo-500/25 transition-colors shadow-sm"
+                        >
+                          <i data-lucide="maximize-2" className="w-3.5 h-3.5 text-indigo-400"></i>
+                          <span>Deep Dive</span>
+                        </button>
+
+                        <a
+                          href={project.linkedinPostUrl || PORTFOLIO_DATA.profile.linkedin}
+                          target="_blank"
+                          className="py-2.5 px-3 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-300 hover:text-white border border-indigo-500/30 transition-colors flex items-center gap-1.5 text-xs font-mono font-semibold"
+                          title="LinkedIn Project Post"
+                        >
+                          <i data-lucide="linkedin" className="w-3.5 h-3.5 text-indigo-400"></i>
+                          <span>Post</span>
+                        </a>
+
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          className="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-indigo-500/25 transition-colors flex items-center gap-1.5 text-xs font-mono"
+                          title="GitHub Repository"
+                        >
+                          <i data-lucide="github" className="w-4 h-4"></i>
+                          <span>Code</span>
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </section>
+
+          {/* DEDICATED EDUCATION SECTION */}
+          <section id="education" className="py-20 md:py-24 relative z-10 border-t border-slate-800/80 bg-[#080c16]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 space-y-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/25 font-semibold">
+                  Academic Background
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                  Formal Education & Academic Degree
+                </h2>
+                <p className="text-slate-400 text-sm sm:text-base md:text-lg">
+                  Engineering foundation in relational database architecture, applied mathematics, statistical computing, and analytical modeling.
+                </p>
+              </div>
+
+              {/* Education Main Card */}
+              <div className="max-w-4xl mx-auto">
+                <div className="glass-card rounded-3xl p-6 sm:p-8 md:p-10 border border-indigo-500/25 relative overflow-hidden shadow-2xl space-y-6 sm:space-y-8">
+                  
+                  {/* Glow */}
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+                    <div className="flex items-start sm:items-center gap-4 sm:gap-5">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-slate-900 border border-indigo-500/30 p-2 flex-shrink-0 flex items-center justify-center overflow-hidden shadow-lg">
+                        <img 
+                          src={PORTFOLIO_DATA.education.logo} 
+                          alt={PORTFOLIO_DATA.education.institution} 
+                          className="w-full h-full object-contain rounded-xl"
+                        />
+                      </div>
+                      <div>
+                        <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 font-mono text-xs font-semibold mb-1">
+                          <i data-lucide="graduation-cap" className="w-3.5 h-3.5"></i>
+                          <span>Graduated Engineer</span>
+                        </div>
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight">
+                          {PORTFOLIO_DATA.education.degree}
+                        </h3>
+                        <h4 className="text-sm sm:text-base md:text-lg font-semibold text-indigo-300 mt-0.5">
+                          {PORTFOLIO_DATA.education.institution}
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:items-end gap-1 text-xs font-mono text-slate-400">
+                      <span className="flex items-center gap-1.5 text-slate-300">
+                        <i data-lucide="map-pin" className="w-3.5 h-3.5 text-indigo-400"></i>
+                        {PORTFOLIO_DATA.education.location}
+                      </span>
+                      <span className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+                        <i data-lucide="calendar" className="w-3.5 h-3.5"></i>
+                        {PORTFOLIO_DATA.education.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-mono uppercase tracking-wider text-indigo-400 font-bold flex items-center gap-2">
+                      <i data-lucide="book-open" className="w-4 h-4 text-purple-400"></i>
+                      Academic Rigor & Engineering Curricula:
+                    </h4>
+                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                      {PORTFOLIO_DATA.education.description} Comprehensive coursework in database design, mathematical statistics, algorithm optimization, and computing theory provided the rigorous analytical foundation required for enterprise-scale Data Analysis and Business Intelligence architectures.
+                    </p>
+                  </div>
+
+                  {/* Coursework Matrix */}
+                  <div className="space-y-3 pt-2">
+                    <span className="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold block">
+                      Core Foundations & Coursework:
+                    </span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                      {PORTFOLIO_DATA.education.coursework.map((course, idx) => (
+                        <div 
+                          key={idx}
+                          className="p-3.5 rounded-2xl bg-slate-900/90 border border-indigo-500/20 text-center flex flex-col items-center justify-center gap-1 hover:border-indigo-500/40 transition-colors"
+                        >
+                          <i data-lucide="check-circle-2" className="w-4 h-4 text-indigo-400 mb-0.5"></i>
+                          <span className="text-xs font-bold text-slate-200">{course}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Verification Banner */}
+                  <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-sky-500/10 border border-indigo-500/25 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="award" className="w-5 h-5 text-indigo-400"></i>
+                      </div>
+                      <div>
+                        <div className="text-sm font-bold text-white">Engineering Degree Verified</div>
+                        <div className="text-xs text-slate-400">Jawaharlal Nehru Technological University, Kakinada</div>
+                      </div>
+                    </div>
+                    <span className="px-3.5 py-1.5 rounded-xl bg-slate-900 border border-indigo-500/30 text-xs font-mono text-emerald-400 font-semibold flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                      Strong Academic Record
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          {/* CERTIFICATIONS SECTION: 7 VERIFIED CREDENTIALS */}
+          <section id="certifications" className="py-20 md:py-24 relative z-10 bg-[#0b101e]/70 border-t border-slate-800/80">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 space-y-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/25 font-semibold">
+                  Verified Credentials
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                  7 Verified Licenses & Certifications
+                </h2>
+                <p className="text-slate-400 text-sm sm:text-base md:text-lg">
+                  Credentials in AWS Cloud, IBM Relational SQL, Python, Tableau, and Deloitte corporate simulations.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {PORTFOLIO_DATA.certifications.map((cert) => (
+                  <div 
+                    key={cert.id}
+                    className="glass-card rounded-2xl overflow-hidden border border-indigo-500/20 hover:border-indigo-500/50 hover:shadow-xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col justify-between group"
+                  >
+                    <div>
+                      <div 
+                        onClick={() => setSelectedCert(cert)}
+                        className="relative h-44 bg-slate-950/80 cursor-pointer overflow-hidden border-b border-indigo-500/20 group-hover:opacity-95"
+                      >
+                        <img 
+                          src={cert.image} 
+                          alt={cert.title}
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                        
+                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-slate-950/70 backdrop-blur-xs transition-opacity duration-200">
+                          <span className="px-3 py-1.5 rounded-lg bg-indigo-600 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg">
+                            <i data-lucide="zoom-in" className="w-3.5 h-3.5"></i>
+                            View Certificate
+                          </span>
+                        </div>
+
+                        <span className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-slate-900/90 backdrop-blur-md text-[10px] font-mono text-indigo-300 border border-indigo-500/30 flex items-center gap-1">
+                          <i data-lucide="shield-check" className="w-3 h-3 text-indigo-400"></i>
+                          {cert.badge || "Verified"}
+                        </span>
+                      </div>
+
+                      <div className="p-5 space-y-3">
+                        <div className="flex items-center gap-1.5 text-xs text-indigo-400 font-medium">
+                          <i data-lucide="award" className="w-3.5 h-3.5 flex-shrink-0"></i>
+                          <span className="truncate">{cert.issuer}</span>
+                        </div>
+
+                        <h3 className="text-base font-bold text-white leading-snug line-clamp-2 group-hover:text-indigo-300 transition-colors">
+                          {cert.title}
+                        </h3>
+
+                        <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                          {cert.description}
+                        </p>
+
+                        <div className="pt-2 flex flex-wrap gap-1">
+                          {cert.skills.slice(0, 3).map((s, idx) => (
+                            <span key={idx} className="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-900 text-slate-300 border border-slate-700/60">
+                              {s}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-5 pt-0 border-t border-slate-800/60 mt-3 flex items-center justify-between text-xs text-slate-400">
+                      <span className="flex items-center gap-1 text-[11px] font-mono">
+                        <i data-lucide="calendar" className="w-3 h-3 text-slate-500"></i>
+                        {cert.issueDate}
+                      </span>
+
+                      <button 
+                        onClick={() => setSelectedCert(cert)}
+                        className="text-indigo-400 hover:text-indigo-300 font-mono text-[11px] flex items-center gap-1"
+                      >
+                        Preview
+                        <i data-lucide="external-link" className="w-3 h-3"></i>
+                      </button>
+                    </div>
+
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </section>
+
+          {/* CONTACT SECTION */}
+          <section id="contact" className="py-20 md:py-24 relative z-10 border-t border-slate-800/80">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              
+              <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16 space-y-3">
+                <span className="text-xs font-mono uppercase tracking-widest text-indigo-400 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/25 font-semibold">
+                  Connect & Hire
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                  Let's Discuss Analytics Impact
+                </h2>
+                <p className="text-slate-400 text-sm sm:text-base md:text-lg">
+                  Available for full-time Data Analyst & BI Developer roles in Hyderabad & Bengaluru (On-site, Hybrid, Remote).
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+                
+                <div className="lg:col-span-5 space-y-5">
+                  
+                  {/* Phone & Direct Call Banner */}
+                  <div className="glass-card rounded-2xl p-6 border border-indigo-500/30 bg-gradient-to-br from-indigo-500/10 to-purple-500/10 space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center flex-shrink-0">
+                        <i data-lucide="phone" className="w-6 h-6"></i>
+                      </div>
+                      <div className="min-w-0">
+                        <h4 className="text-base font-bold text-white">Direct Phone Contact</h4>
+                        <p className="text-xs text-slate-400">{PORTFOLIO_DATA.profile.phone}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-slate-300">
+                      Reach out directly for interview scheduling, role discussions, or hiring briefings.
+                    </p>
+                    <div className="flex gap-2">
+                      <a 
+                        href={`tel:${PORTFOLIO_DATA.profile.phone}`}
+                        className="inline-flex items-center justify-center gap-2 flex-1 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm transition-colors shadow-lg shadow-indigo-500/25"
+                      >
+                        <i data-lucide="phone-call" className="w-4 h-4"></i>
+                        <span>Call Directly</span>
+                      </a>
+                      <button 
+                        onClick={() => handleCopy(PORTFOLIO_DATA.profile.phone, 'phone-card')}
+                        className="p-3 rounded-xl bg-slate-900 border border-indigo-500/25 text-slate-300 hover:text-white"
+                        title="Copy Phone"
+                      >
+                        <i data-lucide={copiedText === 'phone-card' ? 'check' : 'copy'} className="w-4 h-4 text-emerald-400"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Email Card */}
+                  <div className="glass-card rounded-2xl p-6 border border-indigo-500/20 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="w-10 h-10 rounded-xl bg-slate-900 text-slate-300 flex items-center justify-center border border-indigo-500/20 flex-shrink-0">
+                          <i data-lucide="mail" className="w-5 h-5 text-indigo-400"></i>
+                        </div>
+                        <div className="min-w-0">
+                          <div className="text-xs text-slate-400 font-mono">Direct Email</div>
+                          <div className="text-sm font-semibold text-white break-all">{PORTFOLIO_DATA.profile.email}</div>
+                        </div>
+                      </div>
+                      <button 
+                        onClick={() => handleCopy(PORTFOLIO_DATA.profile.email, 'email-card')}
+                        className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-indigo-500/20 flex-shrink-0"
+                        title="Copy Email"
+                      >
+                        <i data-lucide={copiedText === 'email-card' ? 'check' : 'copy'} className="w-4 h-4 text-indigo-400"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* LinkedIn Banner */}
+                  <div className="glass-card rounded-2xl p-6 border border-indigo-500/20 flex items-center justify-between gap-4">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-10 h-10 rounded-xl bg-slate-900 text-indigo-400 flex items-center justify-center border border-indigo-500/20 flex-shrink-0">
+                        <i data-lucide="linkedin" className="w-5 h-5"></i>
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-xs text-slate-400 font-mono">LinkedIn Profile</div>
+                        <div className="text-sm font-semibold text-white truncate">1,304+ Followers • 1,481+ Impressions</div>
+                      </div>
+                    </div>
+                    <a 
+                      href={PORTFOLIO_DATA.profile.linkedin}
+                      target="_blank"
+                      className="p-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 border border-indigo-500/20 flex-shrink-0"
+                    >
+                      <i data-lucide="external-link" className="w-4 h-4"></i>
+                    </a>
+                  </div>
+
+                  {/* Location Card */}
+                  <div className="glass-card rounded-2xl p-6 border border-indigo-500/20 flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-slate-900 text-emerald-400 flex items-center justify-center border border-indigo-500/20 flex-shrink-0">
+                      <i data-lucide="globe" className="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <div className="text-xs text-slate-400 font-mono">Location & Relocation</div>
+                      <div className="text-sm font-semibold text-white">{PORTFOLIO_DATA.profile.location}</div>
+                      <div className="text-xs text-indigo-400 font-mono">Open to Hyderabad, Bengaluru, Remote</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Form */}
+                <div className="lg:col-span-7 glass-card rounded-3xl p-5 sm:p-7 md:p-9 border border-indigo-500/20 shadow-xl">
+                  <div className="flex items-center gap-2.5 mb-2">
+                    <span className="p-2 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400">
+                      <i data-lucide="send" className="w-4 h-4"></i>
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white">Send Direct Message</h3>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-400 mb-5 sm:mb-7 leading-relaxed">
+                    Recruiters, hiring managers & teams: submit role requirements or inquiries below. Ramakotaiah replies within 24 hours.
+                  </p>
+
+                  {formSubmitted ? (
+                    <div className="p-6 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-center space-y-3">
+                      <div className="w-12 h-12 rounded-full bg-indigo-500/25 text-indigo-300 mx-auto flex items-center justify-center">
+                        <i data-lucide="check" className="w-6 h-6"></i>
+                      </div>
+                      <h4 className="text-lg font-bold text-white">Message Dispatched!</h4>
+                      <p className="text-sm text-slate-300">
+                        Thank you for reaching out. Ramakotaiah has received your message.
+                      </p>
+                    </div>
+                  ) : (
+                    <form onSubmit={handleFormSubmit} className="space-y-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="space-y-1.5">
+                          <label className="text-[11px] font-mono text-slate-300 uppercase font-semibold flex items-center gap-1.5">
+                            <i data-lucide="user" className="w-3.5 h-3.5 text-indigo-400"></i>
+                            <span>Your Name</span>
+                          </label>
+                          <input 
+                            type="text" 
+                            required
+                            placeholder="Recruiter / Hiring Manager"
+                            value={contactForm.name}
+                            onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                            className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 focus:outline-none text-white text-sm placeholder:text-slate-500 transition-all"
+                          />
+                        </div>
+                        <div className="space-y-1.5">
+                          <label className="text-[11px] font-mono text-slate-300 uppercase font-semibold flex items-center gap-1.5">
+                            <i data-lucide="mail" className="w-3.5 h-3.5 text-indigo-400"></i>
+                            <span>Email Address</span>
+                          </label>
+                          <input 
+                            type="email" 
+                            required
+                            placeholder="recruiter@company.com"
+                            value={contactForm.email}
+                            onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                            className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 focus:outline-none text-white text-sm placeholder:text-slate-500 transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <label className="text-[11px] font-mono text-slate-300 uppercase font-semibold flex items-center gap-1.5">
+                          <i data-lucide="briefcase" className="w-3.5 h-3.5 text-indigo-400"></i>
+                          <span>Subject / Role Title</span>
+                        </label>
+                        <input 
+                          type="text" 
+                          required
+                          placeholder="Data Analyst Opportunity / Interview Invitation"
+                          value={contactForm.subject}
+                          onChange={(e) => setContactForm({ ...contactForm, subject: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 focus:outline-none text-white text-sm placeholder:text-slate-500 transition-all"
+                        />
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <label className="text-[11px] font-mono text-slate-300 uppercase font-semibold flex items-center gap-1.5">
+                          <i data-lucide="message-square" className="w-3.5 h-3.5 text-indigo-400"></i>
+                          <span>Message</span>
+                        </label>
+                        <textarea 
+                          rows="4" 
+                          required
+                          placeholder="Role requirements, interview details, or inquiries..."
+                          value={contactForm.message}
+                          onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 focus:outline-none text-white text-sm placeholder:text-slate-500 resize-none transition-all"
+                        ></textarea>
+                      </div>
+
+                      <button 
+                        type="submit"
+                        className="w-full py-3.5 sm:py-4 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-500 hover:from-indigo-500 hover:to-sky-400 active:scale-[0.99] shadow-xl shadow-indigo-500/25 transition-all flex items-center justify-center gap-2 border border-indigo-400/30 cursor-pointer"
+                      >
+                        <span>Send Direct Message</span>
+                        <i data-lucide="send" className="w-4 h-4"></i>
+                      </button>
+                    </form>
+                  )}
+
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* FOOTER: ULTRA-RESPONSIVE PILL SYSTEM PREVENTING ANY HORIZONTAL OVERFLOW */}
+          <footer className="py-12 relative z-10 border-t border-slate-800 bg-[#080c16] w-full overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+              <div className="flex flex-col items-center justify-center gap-6 text-center">
+                
+                {/* Brand info */}
+                <div className="flex flex-wrap items-center gap-3 justify-center">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-indigo-500/40 p-[1px] bg-indigo-500/20 flex-shrink-0">
+                    <img 
+                      src={PORTFOLIO_DATA.profile.avatar} 
+                      alt="RD"
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                  <span className="text-sm font-bold text-white tracking-tight">
+                    {PORTFOLIO_DATA.profile.name}
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">
+                    © {new Date().getFullYear()} All Rights Reserved.
+                  </span>
+                </div>
+
+                {/* Footer Nav Links - Touch-friendly pills that wrap gracefully on any screen */}
+                <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-3xl text-xs font-medium text-slate-300">
+                  <a href="#hero" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Home</a>
+                  <a href="#about" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">About</a>
+                  <a href="#skills" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Skills</a>
+                  <a href="#projects" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Projects (5)</a>
+                  <a href="#education" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Education (JNTUK)</a>
+                  <a href="#certifications" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Certifications (7)</a>
+                  <a href="./resume.html" target="_blank" className="px-3 py-1.5 rounded-xl bg-emerald-500/15 text-emerald-300 hover:bg-emerald-500/25 border border-emerald-500/30 transition-colors flex items-center gap-1">
+                    <i data-lucide="file-text" className="w-3.5 h-3.5"></i>
+                    <span>ATS Resume</span>
+                  </a>
+                  <a href="#contact" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Contact</a>
+                  <a href={PORTFOLIO_DATA.profile.linkedin} target="_blank" className="px-3 py-1.5 rounded-xl bg-indigo-500/15 text-indigo-300 hover:bg-indigo-500/25 border border-indigo-500/30 transition-colors flex items-center gap-1">
+                    <i data-lucide="linkedin" className="w-3.5 h-3.5"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                </div>
+
+                {/* Tech Badges */}
+                <div className="flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-slate-400 pt-2 border-t border-slate-800/60 w-full max-w-md">
+                  <span>Engineered with</span>
+                  <span className="text-indigo-400 font-semibold">React</span>
+                  <span>•</span>
+                  <span className="text-purple-400 font-semibold">Tailwind CSS</span>
+                  <span>•</span>
+                  <span className="text-sky-400 font-semibold">TypeScript</span>
+                </div>
+
+              </div>
+            </div>
+          </footer>
+
+          {/* PROJECT DEEP DIVE MODAL */}
+          {selectedProject && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+              <div className="glass-card max-w-3xl w-full rounded-3xl border border-indigo-500/30 p-5 sm:p-8 space-y-5 sm:space-y-6 relative max-h-[92vh] overflow-y-auto">
+                <button 
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute top-5 right-5 sm:top-6 sm:right-6 p-2 rounded-xl bg-slate-900 border border-indigo-500/20 text-slate-400 hover:text-white transition-colors"
+                >
+                  <i data-lucide="x" className="w-5 h-5"></i>
+                </button>
+
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <span className="px-3 py-1 rounded-md bg-indigo-500/20 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-bold">
+                      {selectedProject.projectNumber}
+                    </span>
+                    <span className="text-xs text-slate-400 font-mono">
+                      {selectedProject.category}
+                    </span>
+                  </div>
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white">
+                    {selectedProject.title}
+                  </h3>
+                  <p className="text-slate-400 text-xs sm:text-sm">
+                    {selectedProject.subtitle}
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  {selectedProject.description}
+                </div>
+
+                {selectedProject.daxFunctions && selectedProject.daxFunctions.length > 0 && (
+                  <div className="space-y-3">
+                    <h4 className="text-xs sm:text-sm font-bold text-indigo-300 uppercase tracking-wider font-mono flex items-center gap-2">
+                      <i data-lucide="sparkles" className="w-4 h-4 text-purple-400"></i>
+                      Key DAX Functions & Formulations Engineered:
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
+                      {selectedProject.daxFunctions.map((dax, dIdx) => (
+                        <div key={dIdx} className="p-2.5 rounded-xl bg-slate-950 border border-indigo-500/20 text-indigo-200">
+                          • {dax}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <div className="space-y-3">
+                  <h4 className="text-xs sm:text-sm font-bold text-white uppercase tracking-wider font-mono">
+                    Architecture & Engineering Workflows:
+                  </h4>
+                  <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
+                    {selectedProject.highlights.map((h, i) => (
+                      <li key={i} className="flex items-start gap-2.5">
+                        <i data-lucide="check-circle" className="w-4 h-4 text-indigo-400 mt-0.5 flex-shrink-0"></i>
+                        <span>{h}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-xs sm:text-sm text-indigo-200">
+                  <strong className="text-white block font-mono text-xs uppercase mb-1">Business Impact & Stakeholder Value:</strong>
+                  {selectedProject.businessImpact}
+                </div>
+
+                <div className="flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3 pt-4 border-t border-slate-800">
+                  <button 
+                    onClick={() => setSelectedProject(null)}
+                    className="flex-1 min-w-[120px] py-3 px-4 rounded-xl bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-500 text-white font-bold text-xs sm:text-sm shadow-lg hover:shadow-indigo-500/25 transition-all"
+                  >
+                    Done Exploring
+                  </button>
+                  <a 
+                    href={selectedProject.linkedinPostUrl || PORTFOLIO_DATA.profile.linkedin} 
+                    target="_blank" 
+                    className="py-3 px-4 rounded-xl bg-indigo-600/25 text-indigo-300 hover:text-white font-semibold text-xs sm:text-sm border border-indigo-500/40 hover:bg-indigo-600/40 transition-colors flex items-center justify-center gap-2"
+                  >
+                    <i data-lucide="linkedin" className="w-4 h-4 text-indigo-400"></i>
+                    <span>LinkedIn Post</span>
+                  </a>
+                  <a 
+                    href={selectedProject.githubUrl} 
+                    target="_blank" 
+                    className="py-3 px-4 rounded-xl bg-slate-900 text-white font-semibold text-xs sm:text-sm text-center border border-indigo-500/30 hover:bg-slate-800 transition-colors flex items-center justify-center gap-2"
+                  >
+                    <span>GitHub</span>
+                    <i data-lucide="github" className="w-4 h-4"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          )}
+
+          {/* CERTIFICATE MODAL PREVIEW */}
+          {selectedCert && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+              <div className="glass-card max-w-3xl w-full rounded-3xl border border-indigo-500/30 p-5 sm:p-6 space-y-4 sm:space-y-5 relative max-h-[92vh] overflow-y-auto">
+                <button 
+                  onClick={() => setSelectedCert(null)}
+                  className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-xl bg-slate-900 border border-indigo-500/20 text-slate-400 hover:text-white"
+                >
+                  <i data-lucide="x" className="w-5 h-5"></i>
+                </button>
+
+                <div className="flex items-center gap-2">
+                  <span className="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-mono font-semibold">
+                    {selectedCert.issuer}
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">
+                    Issued {selectedCert.issueDate}
+                  </span>
+                </div>
+
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
+                  {selectedCert.title}
+                </h3>
+
+                <div className="rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 flex items-center justify-center max-h-[450px]">
+                  <img 
+                    src={selectedCert.image} 
+                    alt={selectedCert.title}
+                    className="w-full h-auto max-h-[450px] object-contain"
+                  />
+                </div>
+
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/90 border border-indigo-500/20 space-y-2">
+                  <span className="text-xs font-mono uppercase tracking-wider text-indigo-400 font-bold block">
+                    Verification Details & Competency
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {selectedCert.description}
+                  </p>
+                  {selectedCert.credentialId && (
+                    <div className="text-xs font-mono text-slate-400 pt-1">
+                      Credential ID: <strong className="text-slate-200">{selectedCert.credentialId}</strong>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex gap-3 pt-2">
+                  <a 
+                    href={selectedCert.verificationUrl}
+                    target="_blank"
+                    className="flex-1 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-xs sm:text-sm text-center shadow-lg hover:shadow-indigo-500/25 transition-all flex items-center justify-center gap-2"
+                  >
+                    <span>Open Verification Link</span>
+                    <i data-lucide="external-link" className="w-4 h-4"></i>
+                  </a>
+                  <button 
+                    onClick={() => setSelectedCert(null)}
+                    className="px-5 py-3 rounded-xl bg-slate-900 text-slate-300 hover:text-white font-semibold text-xs sm:text-sm border border-indigo-500/30 transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

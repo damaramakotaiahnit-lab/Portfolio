@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0186)https://li.protechts.net/index.html?ts=1793942281031&r_id=AAZflLw0pKKYU7pwgFffKA%3D%3D&app_id=PXdOjV695v&uc=scraping&d_id=f4043e60ee30750cdbb72eb6fbb574603f5ee96df15929b17817788495643057 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script>
+        function getDecodedQueryParams(queryString) {
+            var params = {};
+            var query = queryString.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                try {
+                    var pair = vars[i].split('=');
+                    params[pair[0]] = decodeURIComponent(pair[1]);
+                } catch(e) {
+                    // ignore
+                }
+            }
+            return params;
+        }
+        var params = getDecodedQueryParams(window.location.search);
+        var appId = params['app_id'];
+        window._pxParam2 = params['d_id'];
+        window._pxParam3 = params['r_id'];
+        window._pxParam4 = params['uc'];
+        window._pxParam5 = params['pt'];
+
+        // Local sensor injection
+        var s = document.createElement('script');
+        s.src = 'https://client.protechts.net/' + appId + '/main.min.js';
+        document.head.appendChild(s);
+    </script><script src="./main.min.js.download"></script>
+</head>
+<body>
+
+<iframe name="q7k2m8010129" aria-hidden="true" tabindex="-1" style="display: none;" src="./saved_resource(7).html"></iframe></body></html>

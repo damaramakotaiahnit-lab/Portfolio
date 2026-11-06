@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramakotaiah Dama - ATS Friendly Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ATS-Optimized Clean Resume Styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #111827;
+      background: #f3f4f6;
+      line-height: 1.45;
+      font-size: 10.5pt;
+      padding: 24px 16px;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px 48px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    .no-print-bar {
+      max-width: 850px;
+      margin: 0 auto 16px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #4f46e5;
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #4338ca;
+    }
+    .btn-secondary {
+      background: #ffffff;
+      color: #374151;
+      border: 1px solid #d1d5db;
+      box-shadow: none;
+    }
+    .btn-secondary:hover {
+      background: #f9fafb;
+    }
+    /* Header */
+    header {
+      text-align: center;
+      border-bottom: 2px solid #1f2937;
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 22pt;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #111827;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .job-title {
+      font-size: 12pt;
+      font-weight: 700;
+      color: #4f46e5;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-info {
+      font-size: 9.5pt;
+      color: #374151;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+    }
+    .contact-info a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      color: #4f46e5;
+      text-decoration: underline;
+    }
+    .separator {
+      color: #9ca3af;
+    }
+    /* Section Headings */
+    h2 {
+      font-size: 11.5pt;
+      font-weight: 800;
+      color: #111827;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1.5px solid #374151;
+      padding-bottom: 3px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+    /* Section Content */
+    p {
+      margin-bottom: 6px;
+      color: #1f2937;
+      text-align: justify;
+    }
+    .item {
+      margin-bottom: 10px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 2px;
+    }
+    .item-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 9.5pt;
+      color: #4b5563;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .skills-block {
+      font-size: 9.5pt;
+      margin-bottom: 6px;
+      line-height: 1.5;
+    }
+    .skills-block strong {
+      color: #111827;
+      font-weight: 700;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-bottom: 6px;
+    }
+    li {
+      margin-bottom: 3px;
+      font-size: 9.5pt;
+      color: #1f2937;
+      line-height: 1.45;
+    }
+    li strong {
+      color: #111827;
+    }
+    .cert-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 12px;
+      font-size: 9.5pt;
+    }
+    @media (max-width: 600px) {
+      .cert-list {
+        grid-template-columns: 1fr;
+      }
+      .resume-container {
+        padding: 24px 18px;
+      }
+    }
+    /* Print Optimization */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+        font-size: 10pt;
+      }
+      .no-print-bar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      h2 {
+        margin-top: 10px;
+        margin-bottom: 6px;
+      }
+      .item {
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+      }
+      a {
+        text-decoration: none;
+        color: #111827;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar (hidden on print) -->
+  <div class="no-print-bar">
+    <div style="font-size: 13px; font-weight: 600; color: #4b5563;">
+      📄 ATS-Optimized Clean Resume (Single-Column Standard)
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <a href="./index.html" class="btn btn-secondary">← Back to Portfolio</a>
+      <button onclick="window.print()" class="btn">🖨️ Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <main class="resume-container">
+    
+    <!-- HEADER -->
+    <header>
+      <h1>Ramakotaiah Dama</h1>
+      <div class="job-title">Enterprise Data Analyst &amp; Business Intelligence Specialist</div>
+      <div class="contact-info">
+        <span>📍 Hyderabad, India (Open to Bengaluru &amp; Remote)</span>
+        <span class="separator">•</span>
+        <span>📞 <a href="tel:+917095942623">+91 7095942623</a></span>
+        <span class="separator">•</span>
+        <span>✉️ <a href="mailto:damaramakotaiahnit@gmail.com">damaramakotaiahnit@gmail.com</a></span>
+      </div>
+      <div class="contact-info" style="margin-top: 3px;">
+        <span>🔗 <a href="https://www.linkedin.com/in/ramakotaiah-dama-04789b245/" target="_blank">linkedin.com/in/ramakotaiah-dama-04789b245</a></span>
+        <span class="separator">•</span>
+        <span>💻 <a href="https://github.com/damaramakotaiahnit-lab" target="_blank">github.com/damaramakotaiahnit-lab</a></span>
+        <span class="separator">•</span>
+        <span>🌐 Languages: English (Professional), Telugu (Native)</span>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Results-driven <strong>Enterprise Data Analyst and Business Intelligence Specialist</strong> with proven expertise in engineering production data pipelines, relational database architectures, and executive Power BI dashboards. Specialist in authoring complex <strong>DAX measures</strong> (TOPN, RANKX, CALCULATE, ALLEXCEPT, SUMX), building <strong>relational SQL architectures</strong> (SQL Server, MySQL, PostgreSQL), and deploying role-based <strong>Row-Level Security (RLS)</strong> and automated refreshes in Power BI Service. Holds a Bachelor of Technology from <strong>JNTUK</strong>, an 89-hour intensive Data Analyst Bootcamp credential, and 7 verified certifications from AWS, IBM, Deloitte, and LinkedIn Learning. Immediate joiner ready to deliver immediate quantitative value.
+      </p>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-block">
+        <strong>Business Intelligence &amp; Visualization:</strong> Power BI Desktop, Power BI Service, Power BI Apps, Advanced DAX (TOPN, RANKX, CALCULATE, ALLEXCEPT, FILTER, SUMX, MEDIANX), Tableau Desktop &amp; Tableau Cloud, Power Query (M-Code ETL), Data Modeling (Star Schema &amp; Snowflake Schema), Row-Level Security (RLS), Interactive Bookmarks, AppSource Visuals.
+      </div>
+      <div class="skills-block">
+        <strong>Databases &amp; Query Optimization:</strong> Microsoft SQL Server (SSMS), MySQL, PostgreSQL, Complex SQL (CTEs, Window Functions: ROW_NUMBER, DENSE_RANK, Multi-table JOINs, Subqueries, Stored Procedures, DDL/DML, Schema Transformations).
+      </div>
+      <div class="skills-block">
+        <strong>Cloud Data Warehousing &amp; Infrastructure:</strong> Snowflake (Virtual Warehouses, Zero-Copy Cloning), Microsoft Azure (Azure SQL Database, Entra ID Authentication), AWS (EC2, S3 Data Lake, Bucket Policies), Google Cloud Platform (BigQuery SQL).
+      </div>
+      <div class="skills-block">
+        <strong>Programming &amp; Analytics:</strong> Python (Pandas, NumPy, Matplotlib, Seaborn), Exploratory Data Analysis (EDA), Statistics for Data Science, Hypothesis Testing, Feature Engineering, Advanced Microsoft Excel (XLOOKUP, Power Query, Pivot Tables, Scenario Modeling).
+      </div>
+      <div class="skills-block">
+        <strong>AI &amp; Automation:</strong> Perplexity AI Query/DAX Optimization, AWS Prompt Engineering, Large Language Model Conditioning, Automated Reporting Briefs.
+      </div>
+    </section>
+
+    <!-- ENTERPRISE PROJECTS (10 COMPLETE PRODUCTION IMPLEMENTATIONS) -->
+    <section>
+      <h2>Enterprise Data &amp; BI Projects</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Retail E-Commerce Sales Trend &amp; Product Profitability Engine</span>
+          <span>Power BI, Advanced DAX, Star Schema</span>
+        </div>
+        <ul>
+          <li>Engineered end-to-end retail sales intelligence cockpit analyzing transactions across product categories, customer segments, and geographical territories.</li>
+          <li>Designed a high-performance <strong>Star Schema</strong> data model establishing 1-to-many relationships between sales fact tables and dimension tables (Date, Products, Customers) with optimized bidirectional filter control.</li>
+          <li>Formulated advanced <strong>DAX measures</strong> including dynamic Top/Bottom 5 Products by Sales, Quantity, and Profit using <code>CALCULATE</code>, <code>TOPN</code>, <code>RANKX</code>, and <code>ALLSELECTED</code>.</li>
+          <li>Constructed sales trend velocity over time, KPI card matrices, and configured <strong>Edit Interactions</strong> across dimension slicers to isolate sales leakage and elevate catalog margins by 15.8%.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Enterprise SQL Server to Power BI Service with Row-Level Security (RLS)</span>
+          <span>MSSQL Server, SSMS, PBI Service, RLS</span>
+        </div>
+        <ul>
+          <li>Provisioned Microsoft SQL Server and SSMS relational repository to host, profile, and transform high-throughput transactional records.</li>
+          <li>Authored multi-visual executive reports featuring Multi-Row Cards, Ribbon Charts for category rank movements, Line/Bar combos, Donut distributions, and Drill-Through filters.</li>
+          <li>Engineered and tested role-based <strong>Row-Level Security (RLS)</strong> using <code>[UserPrincipalName]</code> DAX filters in Power BI Desktop and validated access privileges in Power BI Service.</li>
+          <li>Published reports to Power BI Service, configured automated <strong>Scheduled Refreshes</strong>, verified gateway synchronization, and delivered role-tailored dashboards with 100% cloud sync.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Customer Banking Sentiment &amp; Balance Transaction Analytics</span>
+          <span>Power Query M-Code, DAX, Bookmarks</span>
+        </div>
+        <ul>
+          <li>Developed Power Query text transformation pipeline to ingest, clean, and score customer banking feedback, applying sentiment extraction algorithms.</li>
+          <li>Engineered dynamic demographic profiling by binning customer ages into actionable demographic tiers (Young Adults, Mid-Career, Seniors) with conditional formatting matrices.</li>
+          <li>Engineered interactive <strong>Power BI Bookmarks &amp; Selection Pane</strong> state controllers enabling 1-click toggling between Transaction Volumes and Account Balance distributions.</li>
+          <li>Synchronized slicers across multi-page report architectures and published to Power BI Service, empowering retention teams to curb customer attrition.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Student Mental Health &amp; Academic Stress Correlation Cockpit</span>
+          <span>SQL Server, Tableau Desktop &amp; Cloud</span>
+        </div>
+        <ul>
+          <li>Executed database cleaning scripts in SQL Server modifying gender encodings, imputing missing values, and engineering structured Age Groups and Depression Index indices.</li>
+          <li>Imported transformed schemas directly from SQL Server into <strong>Tableau Desktop</strong>, establishing relational data extraction models.</li>
+          <li>Constructed visual analytics examining correlations between Academic Pressure, Financial Stress, Sleep Duration, and Study Hours across student demographics.</li>
+          <li>Published interactive student wellbeing dashboard to <strong>Tableau Cloud</strong>, enabling academic deans and student support counselors to deploy targeted interventions.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>AI-Assisted Multi-Table SQL Pipeline &amp; Banking Churn Risk Analyzer</span>
+          <span>SQL 3-Table Joins, Perplexity AI, Power BI</span>
+        </div>
+        <ul>
+          <li>Engineered complex SQL query pipeline combining data across 3 relational tables using <code>INNER JOIN</code> and <code>LEFT JOIN</code> with date inconsistency normalization.</li>
+          <li>Integrated <strong>Perplexity AI</strong> prompt engineering to audit schema distributions, formulate optimized DAX measures, and identify high-value KPI indicators.</li>
+          <li>Built visual hierarchy featuring TreeMaps for transaction categorization, Inactive Accounts analysis by Year/Month, and Customer Balance by Account Type.</li>
+          <li>Deployed completed analytical dashboard to Power BI Service, driving risk mitigation across dormant and low-balance accounts.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Banking Loan Default Risk &amp; Portfolio Analytics Cockpit</span>
+          <span>Power BI Service, SQL Server, DAX, Gateway</span>
+        </div>
+        <ul>
+          <li>Engineered an enterprise financial credit risk dashboard ingesting 50,000+ loan records from Microsoft SQL Server.</li>
+          <li>Configured an <strong>On-Premises Standard Mode Data Gateway</strong> with automated daily incremental refresh schedules achieving 99.4% uptime.</li>
+          <li>Authored 12+ complex <strong>DAX measures</strong> including YoY Loan Amount Growth, YoY Default Rate variance, and YTD Credit Bins using <code>CALCULATE</code>, <code>ALLEXCEPT</code>, <code>SUMX</code>, <code>MEDIANX</code>, and <code>SAMEPERIODLASTYEAR</code>.</li>
+          <li>Integrated dynamic <strong>Decomposition Trees</strong> powered by <code>SWITCH</code> DAX logic to isolate delinquency root causes across borrower demographics and employment tiers.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Dual-Engine Enterprise Database Migration &amp; Reporting</span>
+          <span>SQL Server ↔ MySQL, M-Code, Power BI</span>
+        </div>
+        <ul>
+          <li>Architected a test-to-production database ETL migration from Microsoft SQL Server staging to MySQL production environment.</li>
+          <li>Formulated optimized SQL <code>LEFT JOIN</code> queries, views, and DDL/DML scripts in MySQL Workbench ensuring 100% data parity and zero reporting downtime.</li>
+          <li>Re-pointed production Power BI data sources seamlessly using <strong>Power Query Advanced Editor (M-Code)</strong> without modifying existing visual layouts.</li>
+          <li>Published and configured role-based access workspaces in Power BI Service for cross-departmental KPI delivery.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Google Cloud BigQuery Real Estate Sales Intelligence Engine</span>
+          <span>GCP BigQuery, Cloud DW, Advanced DAX</span>
+        </div>
+        <ul>
+          <li>Provisioned Google Cloud BigQuery dataset pipelines to process large-scale property transaction records using BigQuery SQL.</li>
+          <li>Connected Power BI directly to Google Cloud via native BigQuery connector, performing data type casting, null imputation, and data wrangling in Power Query.</li>
+          <li>Built multi-tier time-intelligence DAX calculations: Rolling 12-Month Sales (<code>DATESINPERIOD</code>), Offer-to-SQM Price Ratios, and YoY Growth.</li>
+          <li>Embedded an AI-driven <strong>Key Influencers visual</strong> to identify primary attributes (square footage, property age, location) governing pricing velocity.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>Microsoft Azure Cloud SQL Retail Brand Profitability Cockpit</span>
+          <span>Azure Cloud SQL, Entra ID, Power BI Apps</span>
+        </div>
+        <ul>
+          <li>Provisioned and configured a cloud-hosted Microsoft Azure SQL Database for retail inventory and sales transactional data.</li>
+          <li>Configured secure dual authentication using Database credentials and Microsoft Entra ID (Azure Active Directory).</li>
+          <li>Built automated DAX margin analytics: Gross Discount %, Net Profit Margin %, and Cost of Goods Sold (COGS).</li>
+          <li>Distributed executive reports via <strong>Power BI Service Apps</strong> with custom AppSource visuals (Ribbon Chart for brand rank movements, Area Chart for cumulative profit contribution).</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span>End-to-End Enterprise Analytics Pipeline &amp; Decision Model</span>
+          <span>Python, Snowflake, SQL, Power BI</span>
+        </div>
+        <ul>
+          <li>Completed full analytics lifecycle from telemetry data extraction to executive boardroom presentation.</li>
+          <li>Conducted exploratory data analysis, outlier remediation, and feature transformation (scaling, encoding, imputation) in Python (Pandas/NumPy).</li>
+          <li>Designed snowflake relational schema to power sub-second response times for multi-dimension aggregations.</li>
+          <li>Formulated Customer Lifetime Value (CLV) and retention matrices presented through executive dashboard scorecards.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <span>Bachelor of Technology (B.Tech)</span>
+          <span>Graduated</span>
+        </div>
+        <div class="item-sub">
+          <span>Jawaharlal Nehru Technological University, Kakinada (JNTUK)</span>
+          <span>Andhra Pradesh, India</span>
+        </div>
+        <div style="font-size: 9.5pt; color: #374151; margin-top: 2px;">
+          <strong>Core Coursework:</strong> Database Management Systems (DBMS), Applied Mathematics &amp; Statistics, Algorithms &amp; Data Structures, Computer Programming.
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section>
+      <h2>Verified Licenses &amp; Certifications</h2>
+      <div class="cert-list">
+        <div>• <strong>Complete Data Analyst Bootcamp (89 Hours)</strong> – Udemy / Krish AI (2026)</div>
+        <div>• <strong>Deloitte Data Analytics Job Simulation</strong> – Deloitte (2026)</div>
+        <div>• <strong>Foundations of Prompt Engineering</strong> – AWS (2026)</div>
+        <div>• <strong>AI Literacy for Everyone</strong> – LinkedIn Learning (2026)</div>
+        <div>• <strong>Business Analytics with Excel</strong> – Simplilearn (2026)</div>
+        <div>• <strong>SQL &amp; Relational Databases 101</strong> – IBM Cognitive Class</div>
+        <div>• <strong>Getting Started with Tableau Online</strong> – IBM Cognitive Class</div>
+        <div>• <strong>Python 101 for Data Science</strong> – IBM Cognitive Class</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
