@@ -2,7 +2,8 @@
 **Enterprise Data Analyst & Business Intelligence Specialist**  
 Hyderabad, Telangana, India • Open to Hyderabad, Bengaluru & Remote  
 **Phone:** +91 7095942623 • **Email:** damaramakotaiahnit@gmail.com  
-**LinkedIn:** linkedin.com/in/ramakotaiah-dama-04789b245/ • **GitHub:** github.com/damaramakotaiahnit-lab  
+**Portfolio:** [portfolio-k78293df8-ram-4dff.vercel.app](https://portfolio-k78293df8-ram-4dff.vercel.app/)  
+**LinkedIn:** [linkedin.com/in/ramakotaiah-dama-04789b245/](https://www.linkedin.com/in/ramakotaiah-dama-04789b245/) • **GitHub:** [github.com/damaramakotaiahnit-lab](https://github.com/damaramakotaiahnit-lab)  
 **Languages:** English (Professional), Telugu (Native)
 
 ---

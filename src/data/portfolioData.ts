@@ -8,6 +8,7 @@ export const profileData: Profile = {
   phone: "+91 7095942623",
   languages: ["English", "Telugu"],
   degree: "Bachelor of Technology (B.Tech) - JNTUK",
+  portfolioUrl: "https://portfolio-k78293df8-ram-4dff.vercel.app/",
   linkedin: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
   github: "https://github.com/damaramakotaiahnit-lab",
   location: "Hyderabad, Telangana, India",

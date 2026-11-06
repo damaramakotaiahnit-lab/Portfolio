@@ -6,6 +6,7 @@ export interface Profile {
   phone?: string;
   languages?: string[];
   degree?: string;
+  portfolioUrl?: string;
   linkedin: string;
   github: string;
   location: string;
