@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Linkedin, Mail, Github, Globe, ArrowUpRight, Copy, Check, ExternalLink, Send, Phone, PhoneCall } from 'lucide-react';
+import { Linkedin, Mail, Globe, Copy, Check, ExternalLink, Send, Phone, PhoneCall } from 'lucide-react';
 import { profileData } from '../data/portfolioData';
 
 export const Contact: React.FC = () => {
@@ -15,9 +15,11 @@ export const Contact: React.FC = () => {
   };
 
   const handleCopyPhone = () => {
-    navigator.clipboard.writeText(profileData.phone);
-    setCopiedPhone(true);
-    setTimeout(() => setCopiedPhone(false), 2500);
+    if (profileData.phone) {
+      navigator.clipboard.writeText(profileData.phone);
+      setCopiedPhone(true);
+      setTimeout(() => setCopiedPhone(false), 2500);
+    }
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {

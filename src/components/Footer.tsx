@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
             <a href="#hero" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Home</a>
             <a href="#about" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">About</a>
             <a href="#skills" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Skills</a>
-            <a href="#projects" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Projects (5)</a>
+            <a href="#projects" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Projects (10)</a>
             <a href="#education" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Education (JNTUK)</a>
             <a href="#certifications" className="px-3 py-1.5 rounded-xl bg-slate-900/80 hover:bg-indigo-600/30 hover:text-white border border-slate-800 hover:border-indigo-500/40 transition-colors">Certifications (7)</a>
             <a href="./resume.html" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded-xl bg-emerald-500/15 text-emerald-300 hover:bg-emerald-500/25 border border-emerald-500/30 transition-colors">ATS Resume</a>

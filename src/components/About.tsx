@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { 
   User, Mail, Phone, MapPin, GraduationCap, Globe, 
-  ExternalLink, Copy, Check, Target, Sparkles, 
-  Briefcase, CheckCircle 
+  ExternalLink, Copy, Check, Target, 
+  CheckCircle 
 } from 'lucide-react';
 import { profileData } from '../data/portfolioData';
 

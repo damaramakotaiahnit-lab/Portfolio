@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center gap-6">
             <a href="#about" className="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">About</a>
             <a href="#skills" className="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Skills</a>
-            <a href="#projects" className="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Projects (5)</a>
+            <a href="#projects" className="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors">Projects (10)</a>
             <a href="#education" className="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors flex items-center gap-1">
               <GraduationCap className="w-3.5 h-3.5 text-indigo-400" />
               <span>Education</span>
@@ -116,7 +116,7 @@ export const Navbar: React.FC = () => {
           <a href="#hero" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Home</a>
           <a href="#about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">About (Personal Details)</a>
           <a href="#skills" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400">Skills (Split One by One)</a>
-          <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-indigo-300 hover:text-indigo-400">Projects (5)</a>
+          <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-indigo-300 hover:text-indigo-400">Projects (10)</a>
           <a href="#education" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-sm font-semibold text-slate-300 hover:text-indigo-400 flex items-center gap-2">
             <GraduationCap className="w-4 h-4 text-indigo-400" />
             <span>Education (B.Tech JNTUK)</span>

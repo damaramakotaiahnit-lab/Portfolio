@@ -7,7 +7,7 @@ export const Projects: React.FC = () => {
   const [filterProject, setFilterProject] = useState<string>('All');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const filterOptions = ['All', 'Project 01', 'Project 02', 'Project 03', 'Project 04', 'Project 05'];
+  const filterOptions = ['All', 'Project 01', 'Project 02', 'Project 03', 'Project 04', 'Project 05', 'Project 06', 'Project 07', 'Project 08', 'Project 09', 'Project 10'];
 
   const filteredProjects = filterProject === 'All' 
     ? projectsData 
@@ -25,7 +25,7 @@ export const Projects: React.FC = () => {
               <span>Production Capstones • End-to-End Analytics</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              5 Enterprise Data & BI Projects
+              10 Enterprise Data & BI Projects
             </h2>
             <p className="text-slate-400 text-base sm:text-lg">
               Full-scale enterprise implementations: On-Premises Gateways, Power BI Service Dataflows, Azure SQL Cloud, Google BigQuery, and cross-platform database migrations.

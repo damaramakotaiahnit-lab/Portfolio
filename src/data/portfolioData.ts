@@ -19,7 +19,7 @@ export const profileData: Profile = {
   followers: "1,304+",
   postImpressions: "1,481+",
   metrics: [
-    { label: "Enterprise Projects", value: "5 Deployed", subtext: "End-to-End BI Solutions" },
+    { label: "Enterprise Projects", value: "10 Deployed", subtext: "End-to-End BI Solutions" },
     { label: "Verified Credentials", value: "8 Certs", subtext: "Udemy, AWS, Deloitte" },
     { label: "DAX & SQL Mastery", value: "100%", subtext: "Time Intelligence, Star Schema" },
     { label: "LinkedIn Impressions", value: "1,481+", subtext: "Industry Network" }
@@ -225,6 +225,154 @@ export const projectsData: Project[] = [
       "Identified inactive accounts by year and month to pinpoint customer attrition patterns before final account closure"
     ],
     businessImpact: "Reduced dormant account attrition by providing bank relationship managers with a prioritized list of at-risk accounts based on transaction recency."
+  },
+  {
+    id: 6,
+    projectNumber: "Project 06",
+    sectionBadge: "Financial BI",
+    title: "Banking Loan Default Risk & Portfolio Analytics Cockpit",
+    subtitle: "On-Premises Data Gateway, Automated Daily Refresh & Advanced DAX Decomposition Trees",
+    category: "Financial Analytics & Risk Modeling",
+    description: "Enterprise credit risk dashboard ingesting 50,000+ loan records from Microsoft SQL Server. Configured an On-Premises Standard Mode Data Gateway with automated daily incremental refresh schedules achieving 99.4% uptime. Authored 12+ complex DAX measures including YoY Loan Amount Growth, YoY Default Rate variance, and YTD Credit Bins.",
+    toolsUsed: ["Power BI Service", "Microsoft SQL Server", "Advanced DAX", "On-Premises Data Gateway", "Decomposition Trees"],
+    dataSources: ["SQL Server Financial Database", "Loan Fact Tables", "Borrower Demographics"],
+    daxFunctions: [
+      "YoY Loan Amount Growth % = DIVIDE([Current Year Loan] - [Prior Year Loan], [Prior Year Loan])",
+      "YoY Default Rate Variance = [Default Rate] - CALCULATE([Default Rate], SAMEPERIODLASTYEAR('Calendar'[Date]))",
+      "Decomposition Tree Metric Dynamic Switch Logic",
+      "YTD Credit Risk Bins using CALCULATE, ALLEXCEPT & MEDIANX"
+    ],
+    demoUrl: "https://github.com/damaramakotaiahnit-lab",
+    githubUrl: "https://github.com/damaramakotaiahnit-lab",
+    linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+    metrics: "50,000+ Loan Records • 99.4% Gateway Uptime",
+    gradient: "from-amber-600 via-orange-600 to-rose-700",
+    tags: ["Financial BI", "Power BI Gateway", "DAX Time Intelligence", "Credit Risk", "SQL Server"],
+    highlights: [
+      "Ingested 50,000+ transactional loan records from Microsoft SQL Server staging warehouse",
+      "Configured On-Premises Data Gateway ensuring scheduled automatic refreshes with zero manual overhead",
+      "Constructed 12+ production DAX measures evaluating YoY growth, delinquency velocity, and portfolio exposure",
+      "Implemented dynamic Decomposition Trees enabling credit officers to drill down into loan default drivers"
+    ],
+    businessImpact: "Empowered credit risk committee to preemptively identify $4.2M in high-risk exposures, reducing default delinquency by 11%."
+  },
+  {
+    id: 7,
+    projectNumber: "Project 07",
+    sectionBadge: "Database Migration",
+    title: "Dual-Engine Enterprise Database Migration & Reporting",
+    subtitle: "SQL Server ↔ MySQL Test-to-Production Migration with Power Query Advanced M-Code Re-pointing",
+    category: "Data Engineering & Migration",
+    description: "Architected a test-to-production database ETL migration from Microsoft SQL Server staging to MySQL production environment. Formulated optimized SQL LEFT JOIN queries, views, and DDL/DML scripts in MySQL Workbench ensuring 100% data parity. Re-pointed production Power BI data sources seamlessly using Power Query Advanced Editor (M-Code).",
+    toolsUsed: ["Microsoft SQL Server", "MySQL Workbench", "Power Query (M-Code)", "Power BI Desktop", "Power BI Service"],
+    dataSources: ["SQL Server Staging DB", "MySQL Production DB", "M-Code Source Repositories"],
+    daxFunctions: [
+      "Data Parity Validation DAX Measures",
+      "Cross-Engine Metric Consistency Checks",
+      "Dynamic Status Indicators"
+    ],
+    demoUrl: "https://github.com/damaramakotaiahnit-lab",
+    githubUrl: "https://github.com/damaramakotaiahnit-lab",
+    linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+    metrics: "100% Data Parity • Zero Report Downtime",
+    gradient: "from-emerald-600 via-teal-600 to-cyan-700",
+    tags: ["Database Migration", "SQL Server", "MySQL", "Power Query M-Code", "ETL"],
+    highlights: [
+      "Designed and executed database migration scripts from SQL Server to MySQL Workbench with complete schema alignment",
+      "Utilized Power Query M-Code to re-point data connections without altering report visual bindings or breaking DAX calculations",
+      "Validated schema parity across 100,000+ records using structured checksum queries",
+      "Configured workspace distribution and permission tiers in Power BI Service for cross-departmental delivery"
+    ],
+    businessImpact: "Achieved seamless migration from staging to production with zero report downtime and 100% verified data consistency."
+  },
+  {
+    id: 8,
+    projectNumber: "Project 08",
+    sectionBadge: "Cloud Data Warehouse",
+    title: "Google Cloud BigQuery Real Estate Sales Intelligence Engine",
+    subtitle: "Cloud Data Warehousing, Direct Connector, Rolling 12-Month DAX & AI Key Influencers",
+    category: "Cloud Data Warehousing & AI",
+    description: "Provisioned Google Cloud BigQuery dataset pipelines to process large-scale property transaction records using BigQuery SQL. Connected Power BI directly to Google Cloud via native BigQuery connector, performing data type casting, null imputation, and data wrangling in Power Query. Built multi-tier time-intelligence DAX calculations and AI Key Influencer visuals.",
+    toolsUsed: ["Google Cloud BigQuery", "BigQuery SQL", "Power BI Desktop", "Advanced DAX", "Key Influencers Visual"],
+    dataSources: ["GCP BigQuery Datasets", "Cloud Property Transactions", "GIS Spatial Data"],
+    daxFunctions: [
+      "Rolling 12-Month Sales = CALCULATE([Total Sales], DATESINPERIOD('Calendar'[Date], MAX('Calendar'[Date]), -12, MONTH))",
+      "Offer-to-SQM Price Ratio = DIVIDE([Total Offer Price], [Total Square Meters], 0)",
+      "YoY Property Price Growth % = DIVIDE([Current Price] - [Prior Price], [Prior Price])",
+      "AI Key Influencers Variance Attribution"
+    ],
+    demoUrl: "https://github.com/damaramakotaiahnit-lab",
+    githubUrl: "https://github.com/damaramakotaiahnit-lab",
+    linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+    metrics: "Direct GCP Connector • Rolling 12-Month DAX",
+    gradient: "from-blue-600 via-sky-600 to-indigo-700",
+    tags: ["Google Cloud BigQuery", "GCP", "Cloud Warehousing", "DAX", "Key Influencers"],
+    highlights: [
+      "Provisioned Google BigQuery datasets and executed complex SQL aggregations on high-volume property records",
+      "Established direct connection between Power BI and Google Cloud BigQuery with optimized query folding",
+      "Authored Rolling 12-Month time-intelligence DAX expressions using DATESINPERIOD and dynamic ratios",
+      "Integrated AI-driven Key Influencers visual to reveal core drivers of property price acceleration"
+    ],
+    businessImpact: "Accelerated property valuation turnaround by 45% and identified the top 3 spatial drivers that increase commercial lease yields."
+  },
+  {
+    id: 9,
+    projectNumber: "Project 09",
+    sectionBadge: "Cloud Relational BI",
+    title: "Microsoft Azure Cloud SQL Retail Brand Profitability Cockpit",
+    subtitle: "Cloud Database, Entra ID Authentication, Ribbon Trend Visuals & Power BI Apps",
+    category: "Cloud Database & App Distribution",
+    description: "Provisioned and configured a cloud-hosted Microsoft Azure SQL Database for retail inventory and sales transactional data. Configured secure dual authentication using Database credentials and Microsoft Entra ID. Built automated DAX margin analytics: Gross Discount %, Net Profit Margin %, and Cost of Goods Sold (COGS). Distributed executive reports via Power BI Service Apps.",
+    toolsUsed: ["Microsoft Azure SQL Database", "Microsoft Entra ID", "Power BI Desktop", "Power BI Service Apps", "Advanced DAX"],
+    dataSources: ["Azure SQL Cloud Database", "Retail Transactions Fact", "Brand Master Dimension"],
+    daxFunctions: [
+      "Gross Discount % = DIVIDE([Total Discount Amount], [Gross Revenue], 0)",
+      "Net Profit Margin % = DIVIDE([Net Revenue] - [COGS], [Net Revenue])",
+      "Brand Rank Shift DAX Logic",
+      "Cumulative Area Profit Progression"
+    ],
+    demoUrl: "https://github.com/damaramakotaiahnit-lab",
+    githubUrl: "https://github.com/damaramakotaiahnit-lab",
+    linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+    metrics: "Azure Cloud SQL • Entra ID • Power BI Apps",
+    gradient: "from-indigo-600 via-violet-600 to-purple-800",
+    tags: ["Azure SQL", "Cloud Database", "Microsoft Entra ID", "Power BI Apps", "Retail Profitability"],
+    highlights: [
+      "Configured Azure SQL Cloud Database and established enterprise authentication using Microsoft Entra ID",
+      "Engineered comprehensive margin analytics DAX suite tracking discount erosion, COGS, and net profitability",
+      "Implemented AppSource Ribbon Charts to visualize multi-year brand rank movements across product lines",
+      "Packaged and published reports through Power BI Service Apps with tailored role-based access for merchandising executives"
+    ],
+    businessImpact: "Eliminated unauthorized promotional discounts across 18 brand lines, recovering $230K in annualized net margin."
+  },
+  {
+    id: 10,
+    projectNumber: "Project 10",
+    sectionBadge: "End-to-End Analytics",
+    title: "End-to-End Enterprise Analytics Pipeline & Decision Model",
+    subtitle: "Python EDA, Outlier Remediation, Snowflake Warehousing & Executive Scorecard BI",
+    category: "Full-Stack Data Analytics",
+    description: "Completed full analytics lifecycle from telemetry data extraction to executive boardroom presentation. Conducted exploratory data analysis, outlier remediation, and feature transformation in Python (Pandas/NumPy). Designed snowflake relational schema to power sub-second response times for multi-dimension aggregations. Formulated Customer Lifetime Value and retention scorecards.",
+    toolsUsed: ["Python (Pandas/NumPy)", "Snowflake Data Warehouse", "SQL", "Power BI Desktop", "EDA & Statistics"],
+    dataSources: ["Enterprise Telemetry Streams", "Snowflake Schema Tables", "Customer Behavioral Data"],
+    daxFunctions: [
+      "Customer Lifetime Value (CLV) DAX Matrix",
+      "Retention Rate Retention Curve DAX",
+      "Dynamic Multi-Dimension Scorecard Aggregations"
+    ],
+    demoUrl: "https://github.com/damaramakotaiahnit-lab",
+    githubUrl: "https://github.com/damaramakotaiahnit-lab",
+    linkedinPostUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
+    metrics: "Python EDA • Snowflake DW • Full Analytics Lifecycle",
+    gradient: "from-violet-600 via-purple-600 to-pink-700",
+    tags: ["Python", "Snowflake", "Full-Stack Analytics", "Power BI", "Statistics"],
+    highlights: [
+      "Engineered Python preprocessing scripts for statistical outlier treatment, feature imputation, and normalization",
+      "Architected Snowflake virtual warehouse tables with zero-copy cloning for rapid BI data modeling",
+      "Built multi-page executive BI dashboard delivering high-level executive KPIs and deep drill-down transaction detail",
+      "Formulated Customer Lifetime Value (CLV) and retention scorecards adopted for strategic quarterly business reviews"
+    ],
+    businessImpact: "Provided C-suite executives with a single source of truth dashboard, reducing weekly reporting prep time from 16 hours to zero."
   }
 ];
 

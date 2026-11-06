@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
                 href="#projects"
                 className="px-7 py-4 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-sky-500 text-white font-bold text-sm tracking-wide shadow-xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:scale-105 transition-all flex items-center gap-2 group border border-indigo-400/30"
               >
-                <span>View 5 Enterprise Projects</span>
+                <span>View 10 Enterprise Projects</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
 
