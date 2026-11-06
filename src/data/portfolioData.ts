@@ -13,8 +13,8 @@ export const profileData: Profile = {
   location: "Hyderabad, Telangana, India",
   targetLocations: "Hyderabad & Bengaluru (On-site, Hybrid, Remote)",
   status: "Immediate Joiner • Open to Data Analyst & BI Developer Roles",
-  avatarUrl: "./Ramakotaiah Dama _ LinkedIn_files/1793940865669",
-  bannerUrl: "./Ramakotaiah Dama _ LinkedIn_files/1793886905011",
+  avatarUrl: "./profile.jpg",
+  bannerUrl: "./banner.jpg",
   connections: "500+",
   followers: "1,304+",
   postImpressions: "1,481+",
@@ -384,7 +384,7 @@ export const certificationsData: Certification[] = [
     issueDate: "2026",
     credentialId: "UDEMY-6074041-DA",
     verificationUrl: "https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793892230614",
+    image: "./cert-bootcamp.jpg",
     skills: ["Python", "SQL Server", "Power BI", "Tableau", "DAX", "Statistics", "Snowflake"],
     description: "89 total hours of intensive mastery covering Python, Statistics, Feature Engineering, SQL Server, Power BI, Advanced DAX, Tableau, and 5 capstone projects.",
     badge: "89-Hour Bootcamp"
@@ -396,7 +396,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Feb 2026",
     credentialId: "DELOITTE-DA-2026",
     verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793892230614",
+    image: "./cert-deloitte.jpg",
     skills: ["Data Analytics", "Forensic Accounting", "Data Visualization", "Client Presentation"],
     description: "Completed simulated corporate forensic auditing engagement: analyzed 50,000+ transaction anomalies and engineered visual dashboards.",
     badge: "Deloitte Simulation"
@@ -408,7 +408,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Feb 2026",
     credentialId: "AWS-PE-FOUNDATIONS",
     verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793892081620",
+    image: "./cert-aws.jpg",
     skills: ["Prompt Engineering", "Large Language Models", "AWS Cloud", "Inference Optimization"],
     description: "Demonstrated proficiency in structuring prompt conditioning, few-shot templates, and chain-of-thought workflows on AWS.",
     badge: "AWS Certified"
@@ -420,7 +420,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Feb 2026",
     credentialId: "LIL-AI-LIT-2026",
     verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793892404527",
+    image: "./cert-linkedin.jpg",
     skills: ["Artificial Intelligence", "Ethics in AI", "Operational Strategy"],
     description: "Core literacy in artificial intelligence principles, algorithmic accountability, data governance, and strategic business adoption.",
     badge: "LinkedIn Learning"
@@ -432,7 +432,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Jan 2026",
     credentialId: "BA-EXCEL-SIMP",
     verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793891968272",
+    image: "./cert-simplilearn.jpg",
     skills: ["Excel Power Query", "VLOOKUP/XLOOKUP", "Pivot Tables", "Scenario Manager"],
     description: "Financial and business modeling leveraging advanced Excel functions, statistical regression, what-if analysis, and dynamic tables.",
     badge: "Excel Analytics"
@@ -444,7 +444,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Jan 2026",
     credentialId: "IBM-SQL-101",
     verificationUrl: "https://cognitiveclass.ai",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793891381794",
+    image: "./cert-ibm-sql.jpg",
     skills: ["SQL", "Relational Database Design", "DML/DDL", "Joins & Subqueries"],
     description: "Enterprise relational schema querying, multi-table joins, subqueries, group aggregations, and constraint management.",
     badge: "IBM Verified"
@@ -456,7 +456,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Jan 2026",
     credentialId: "IBM-TAB-ONLINE",
     verificationUrl: "https://cognitiveclass.ai",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793891520426",
+    image: "./cert-ibm-tableau.jpg",
     skills: ["Tableau", "Visual Analytics", "Calculated Fields", "Storyboarding"],
     description: "Designing intuitive visual dashboards, trend analytics, geographic maps, and calculated fields in Tableau Online.",
     badge: "Tableau"
@@ -468,7 +468,7 @@ export const certificationsData: Certification[] = [
     issueDate: "Dec 2025",
     credentialId: "IBM-PY-101",
     verificationUrl: "https://cognitiveclass.ai",
-    image: "./Ramakotaiah Dama _ LinkedIn_files/1793891181571",
+    image: "./cert-ibm-python.jpg",
     skills: ["Python", "Pandas", "NumPy", "Data Science Foundations"],
     description: "Comprehensive practical training in Python syntax, NumPy array manipulation, and tabular analysis with Pandas.",
     badge: "Python Science"
@@ -509,7 +509,7 @@ export const educationData: Education[] = [
   {
     degree: "Bachelor of Technology (B.Tech)",
     institution: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
-    logoUrl: "./Ramakotaiah Dama _ LinkedIn_files/1630563635923",
+    logoUrl: "./university.jpg",
     period: "Graduated with Strong Academic Record",
     location: "Kakinada, Andhra Pradesh, India",
     description: "Rigorous technical foundation in engineering principles, applied mathematics, relational database systems, and statistical computation.",

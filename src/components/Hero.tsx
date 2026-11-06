@@ -42,6 +42,13 @@ export const Hero: React.FC = () => {
                       src={profileData.avatarUrl} 
                       alt={profileData.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallback) {
+                          target.dataset.fallback = '1';
+                          target.src = './Ramakotaiah Dama _ LinkedIn_files/1793940865669';
+                        }
+                      }}
                     />
                   </div>
                 </div>

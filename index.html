@@ -129,9 +129,9 @@
         ],
         linkedin: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/",
         github: "https://github.com/damaramakotaiahnit-lab",
-        avatar: "./Ramakotaiah Dama _ LinkedIn_files/1793940865669",
-        banner: "./Ramakotaiah Dama _ LinkedIn_files/1793886905011",
-        universityLogo: "./Ramakotaiah Dama _ LinkedIn_files/1630563635923",
+        avatar: "./profile.jpg",
+        banner: "./banner.jpg",
+        universityLogo: "./university.jpg",
         universityName: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
         metrics: [
           { label: "Enterprise Projects", value: "10 Deployed", subtext: "End-to-End BI Solutions" },
@@ -192,7 +192,7 @@
       education: {
         degree: "Bachelor of Technology (B.Tech)",
         institution: "Jawaharlal Nehru Technological University, Kakinada (JNTUK)",
-        logo: "./Ramakotaiah Dama _ LinkedIn_files/1630563635923",
+        logo: "./university.jpg",
         period: "Graduated with Strong Academic Record",
         location: "Kakinada, Andhra Pradesh, India",
         description: "Rigorous technical foundation in engineering principles, applied mathematics, relational database systems, and statistical computation.",
@@ -501,7 +501,7 @@
           issueDate: "2026",
           credentialId: "UDEMY-6074041-DA",
           verificationUrl: "https://www.udemy.com/course/complete-data-analyst-bootcamp-from-basics-to-advanced/",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892230614",
+          image: "./cert-bootcamp.jpg",
           skills: ["Python", "SQL Server", "Power BI", "Tableau", "DAX", "Statistics", "Snowflake"],
           description: "89 total hours of intensive mastery covering Python, Statistics, Feature Engineering, SQL Server, Power BI, Advanced DAX, Tableau, and 5 capstone projects.",
           badge: "89-Hour Bootcamp"
@@ -513,7 +513,7 @@
           issueDate: "Feb 2026",
           credentialId: "DELOITTE-DA-2026",
           verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892230614",
+          image: "./cert-deloitte.jpg",
           skills: ["Data Analytics", "Forensic Accounting", "Data Visualization", "Client Presentation"],
           description: "Completed simulated corporate forensic auditing engagement: analyzed 50,000+ transaction anomalies and engineered visual dashboards.",
           badge: "Deloitte Simulation"
@@ -525,7 +525,7 @@
           issueDate: "Feb 2026",
           credentialId: "AWS-PE-FOUNDATIONS",
           verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892081620",
+          image: "./cert-aws.jpg",
           skills: ["Prompt Engineering", "Large Language Models", "AWS Cloud", "Inference Optimization"],
           description: "Demonstrated proficiency in structuring prompt conditioning, few-shot templates, and chain-of-thought workflows on AWS.",
           badge: "AWS Certified"
@@ -537,7 +537,7 @@
           issueDate: "Feb 2026",
           credentialId: "LIL-AI-LIT-2026",
           verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793892404527",
+          image: "./cert-linkedin.jpg",
           skills: ["Artificial Intelligence", "Ethics in AI", "Operational Strategy"],
           description: "Core literacy in artificial intelligence principles, algorithmic accountability, data governance, and strategic business adoption.",
           badge: "LinkedIn Learning"
@@ -549,7 +549,7 @@
           issueDate: "Jan 2026",
           credentialId: "BA-EXCEL-SIMP",
           verificationUrl: "https://www.linkedin.com/in/ramakotaiah-dama-04789b245/details/certifications/",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891968272",
+          image: "./cert-simplilearn.jpg",
           skills: ["Excel Power Query", "VLOOKUP/XLOOKUP", "Pivot Tables", "Scenario Manager"],
           description: "Financial and business modeling leveraging advanced Excel functions, statistical regression, what-if analysis, and dynamic tables.",
           badge: "Excel Analytics"
@@ -561,7 +561,7 @@
           issueDate: "Jan 2026",
           credentialId: "IBM-SQL-101",
           verificationUrl: "https://cognitiveclass.ai",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891381794",
+          image: "./cert-ibm-sql.jpg",
           skills: ["SQL", "Relational Database Design", "DML/DDL", "Joins & Subqueries"],
           description: "Enterprise relational schema querying, multi-table joins, subqueries, group aggregations, and constraint management.",
           badge: "IBM Verified"
@@ -573,7 +573,7 @@
           issueDate: "Jan 2026",
           credentialId: "IBM-TAB-ONLINE",
           verificationUrl: "https://cognitiveclass.ai",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891520426",
+          image: "./cert-ibm-tableau.jpg",
           skills: ["Tableau", "Visual Analytics", "Calculated Fields", "Storyboarding"],
           description: "Designing intuitive visual dashboards, trend analytics, geographic maps, and calculated fields in Tableau Online.",
           badge: "Tableau"
@@ -585,7 +585,7 @@
           issueDate: "Dec 2025",
           credentialId: "IBM-PY-101",
           verificationUrl: "https://cognitiveclass.ai",
-          image: "./Ramakotaiah Dama _ LinkedIn_files/1793891181571",
+          image: "./cert-ibm-python.jpg",
           skills: ["Python", "Pandas", "NumPy", "Data Science Foundations"],
           description: "Comprehensive practical training in Python syntax, NumPy array manipulation, and tabular analysis with Pandas.",
           badge: "Python Science"
@@ -664,6 +664,13 @@
                       src={PORTFOLIO_DATA.profile.avatar} 
                       alt={PORTFOLIO_DATA.profile.name}
                       className="w-full h-full object-cover rounded-full"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallback) {
+                          target.dataset.fallback = '1';
+                          target.src = './Ramakotaiah Dama _ LinkedIn_files/1793940865669';
+                        }
+                      }}
                     />
                   </div>
                   <div>
@@ -779,6 +786,13 @@
                         src={PORTFOLIO_DATA.profile.avatar} 
                         alt={PORTFOLIO_DATA.profile.name}
                         className="w-full h-full object-cover rounded-[13px]"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.dataset.fallback) {
+                            target.dataset.fallback = '1';
+                            target.src = './Ramakotaiah Dama _ LinkedIn_files/1793940865669';
+                          }
+                        }}
                       />
                     </div>
                     <div className="space-y-1 text-center sm:text-left">
@@ -1853,6 +1867,13 @@
                       src={PORTFOLIO_DATA.profile.avatar} 
                       alt="RD"
                       className="w-full h-full object-cover rounded-full"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.fallback) {
+                          target.dataset.fallback = '1';
+                          target.src = './Ramakotaiah Dama _ LinkedIn_files/1793940865669';
+                        }
+                      }}
                     />
                   </div>
                   <span className="text-sm font-bold text-white tracking-tight">

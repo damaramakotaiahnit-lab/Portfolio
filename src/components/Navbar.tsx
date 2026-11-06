@@ -20,7 +20,13 @@ export const Navbar: React.FC = () => {
                     alt={profileData.name} 
                     className="w-full h-full object-cover rounded-[10px]"
                     onError={(e) => {
-                      (e.target as HTMLElement).style.display = 'none';
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallback) {
+                        target.dataset.fallback = '1';
+                        target.src = './Ramakotaiah Dama _ LinkedIn_files/1793940865669';
+                      } else {
+                        target.style.display = 'none';
+                      }
                     }}
                   />
                   <span className="fallback-initials">RD</span>
