@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
             </a>
             <a href="#certifications" className="text-sm font-medium text-slate-300 hover:text-indigo-400 transition-colors flex items-center gap-1">
               <Award className="w-3.5 h-3.5 text-purple-400" />
-              <span>Certifications (7)</span>
+              <span>Certifications (8)</span>
             </a>
             <a href="./resume.html" target="_blank" className="text-xs px-3 py-1 rounded-full font-semibold text-emerald-300 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 transition-all flex items-center gap-1">
               <span>Resume</span>

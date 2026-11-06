@@ -26,7 +26,7 @@ export const Certifications: React.FC = () => {
               Verified Licenses & Certifications
             </h2>
             <p className="text-slate-400 text-base sm:text-lg">
-              7 industry-recognized certifications across AWS Cloud, IBM SQL & Python, Tableau, and Deloitte simulations.
+              8 industry-recognized certifications across Data Analytics Bootcamp, AWS Cloud, IBM SQL & Python, Tableau, and Deloitte simulations.
             </p>
           </div>
 
